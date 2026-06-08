@@ -1,0 +1,1393 @@
+[
+  {
+    "id": "preflight",
+    "name": "Pre-Flight",
+    "short": "Cold & Dark",
+    "icon": "📋",
+    "color": "slate",
+    "description": "Aircraft cold and dark. External walk-around complete. Cockpit safety checks. Battery on for fuel quantity, fire warning test, and FMS/nav setup.",
+    "checklist": [
+      "External walk-around — COMPLETE",
+      "Cockpit/cabin inspection — COMPLETE",
+      "Battery switches (BAT 1 & 2) — ON",
+      "Fire warning system — TEST",
+      "Fuel quantity — CHECK (gauges read center/L/R)",
+      "Oxygen — TEST, quantity CHECK",
+      "EFIS / FMS / GPS — INITIALIZE",
+      "TOLD card / V-speeds — COMPUTE & SET",
+      "Brakes #1 — ON; Parking brake — SET"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 20
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 20
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 20
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 20,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        false,
+        false,
+        false
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": false,
+        "D": false,
+        "auxC": false,
+        "auxD": false
+      },
+      "stbyPump": false,
+      "hyd": [
+        0,
+        0,
+        0
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": false,
+        "crew": false,
+        "cabin": false
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": false,
+        "position": false,
+        "taxi": false,
+        "landing": false,
+        "strobe": false,
+        "nav": false
+      },
+      "pitotHeat": false,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "OFF",
+      "autopilot": false,
+      "yawDamp": false
+    }
+  },
+  {
+    "id": "before_start",
+    "name": "Before Start",
+    "short": "APU + clearance",
+    "icon": "⚡",
+    "color": "amber",
+    "description": "APU started (ground only). APU generator on left + right buses. APU bleed on for engine start. Ground crew briefed, ATC clearance received. Beacon on before engine start.",
+    "checklist": [
+      "Clearance — RECEIVED & SET",
+      "APU MASTER — START → RUN",
+      "APU GEN — ON (powers buses)",
+      "APU BLEED — ON (for engine start)",
+      "External power — DISCONNECT (if used)",
+      "Anti-collision (Beacon) — ON",
+      "Fuel boost pumps — ON"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 20
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 20
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 20
+        }
+      ],
+      "apu": {
+        "run": true,
+        "n1": 100,
+        "itt": 580,
+        "gen": true,
+        "bleed": true
+      },
+      "gen": [
+        false,
+        false,
+        false
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        0,
+        0,
+        0
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": false,
+        "crew": false,
+        "cabin": false
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": false,
+        "strobe": false,
+        "nav": true
+      },
+      "pitotHeat": false,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "STBY",
+      "autopilot": false,
+      "yawDamp": false
+    }
+  },
+  {
+    "id": "engine_start",
+    "name": "Engine Start",
+    "short": "ENG 2 → 1 → 3",
+    "icon": "🔥",
+    "color": "red",
+    "description": "Sequential start using APU bleed. ENG 2 typically first (S-duct engine), then 1 and 3. Monitor ITT < 907°C, light-off within 10 sec, idle within 50 sec. Each engine's generator comes online when N2 stabilizes.",
+    "checklist": [
+      "Start Selector — GND START (each engine)",
+      "Start Pushbutton — DEPRESS (< 2 sec)",
+      "ITT — RISE within 10 sec",
+      "N2 — STABILIZE; Oil press rising",
+      "At idle: GEN/OIL/PUMP lights — OUT",
+      "Engine GEN — ON when stable",
+      "Repeat for ENG 1 and ENG 3"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 520
+        },
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 520
+        },
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 520
+        }
+      ],
+      "apu": {
+        "run": true,
+        "n1": 100,
+        "itt": 600,
+        "gen": true,
+        "bleed": true
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": false,
+        "crew": false,
+        "cabin": false
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": false,
+        "strobe": false,
+        "nav": true
+      },
+      "pitotHeat": false,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "STBY",
+      "autopilot": false,
+      "yawDamp": false
+    }
+  },
+  {
+    "id": "after_start",
+    "name": "After Start / Before Taxi",
+    "short": "Configure cabin",
+    "icon": "🛠️",
+    "color": "amber",
+    "description": "All three engines at idle and generators online. APU bleed transferred to engine bleed (CABIN + CREW ON). APU can be shut down or kept running. Flight controls free and correct. Slats/flaps to T/O detent.",
+    "checklist": [
+      "Anti-collision — ON (already)",
+      "Bleed CABIN + CREW — ON (engine bleed)",
+      "APU BLEED — OFF; APU GEN — OFF; APU — STOP",
+      "Flight controls — FREE & CORRECT",
+      "Trims — SET T/O (pitch, roll, yaw centered)",
+      "Slat/Flap handle — SLATS or S+20°",
+      "Yaw damper — CENTERED",
+      "Pitot heat — ON (T/O config)"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 480
+        },
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 480
+        },
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 480
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 200,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 20,
+      "slat": true,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": true,
+        "landing": false,
+        "strobe": false,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "STBY",
+      "autopilot": false,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "taxi",
+    "name": "Taxi",
+    "short": "To runway",
+    "icon": "🚖",
+    "color": "emerald",
+    "description": "Brakes released. Taxi light on. Differential thrust + nose wheel steering for ground handling. Brakes check. Verify yaw damper centered. Final TOLD review.",
+    "checklist": [
+      "Taxi light — ON",
+      "Brakes — CHECK (after rolling)",
+      "Nose wheel steering — VERIFIED",
+      "Flight controls — RE-CHECK as required",
+      "Final TOLD review",
+      "Crew briefing — COMPLETE",
+      "Transponder — TA/RA (or per ATC)"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 48,
+          "n2": 65,
+          "itt": 500
+        },
+        {
+          "run": true,
+          "n1": 48,
+          "n2": 65,
+          "itt": 500
+        },
+        {
+          "run": true,
+          "n1": 48,
+          "n2": 65,
+          "itt": 500
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 80,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 20,
+      "slat": true,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": true,
+        "landing": false,
+        "strobe": false,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "TA/RA",
+      "autopilot": false,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "takeoff",
+    "name": "Takeoff",
+    "short": "V1, VR, V2",
+    "icon": "🛫",
+    "color": "blue",
+    "description": "Power applied — all three engines to T/O thrust (N1 ~101.5%). Brakes released. Rotate at VR, target attitude, V2 minimum. Gear up at positive rate. Watch ITT to 907°C limit (5 min max).",
+    "checklist": [
+      "Landing/taxi lights — ON",
+      "Strobes — ON",
+      "Transponder — TA/RA, ALT",
+      "Power Levers — T/O thrust (N1 ~101.5%)",
+      "Brakes — RELEASED",
+      "Rotate at VR; pitch to attitude",
+      "V2 minimum; gear UP at positive rate",
+      "ITT monitor — < 907°C"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 101,
+          "n2": 99,
+          "itt": 880
+        },
+        {
+          "run": true,
+          "n1": 101,
+          "n2": 99,
+          "itt": 880
+        },
+        {
+          "run": true,
+          "n1": 101,
+          "n2": 99,
+          "itt": 880
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 30,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "transit_up",
+      "flap": 20,
+      "slat": true,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": true,
+        "landing": true,
+        "strobe": true,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "TA/RA",
+      "autopilot": false,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "climb",
+    "name": "Climb",
+    "short": "Clean wing → climb pwr",
+    "icon": "📈",
+    "color": "blue",
+    "description": "Gear up. At V2+15: slats only. At V2+25: clean wing. Climb thrust set (~Max Continuous N1). Autopilot engaged above 1,000 ft. Anti-ice as required. Yaw damper on for cruise.",
+    "checklist": [
+      "Gear UP (positive rate)",
+      "At V2+15: SLATS only",
+      "At V2+25: CLEAN WING",
+      "Climb power set",
+      "Autopilot — ENGAGE (>1,000 ft)",
+      "Anti-ice — AS REQUIRED",
+      "Landing/taxi lights — OFF above 10,000 ft",
+      "Climb speed schedule — MAINTAIN"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 96,
+          "n2": 98,
+          "itt": 860
+        },
+        {
+          "run": true,
+          "n1": 96,
+          "n2": 98,
+          "itt": 860
+        },
+        {
+          "run": true,
+          "n1": 96,
+          "n2": 98,
+          "itt": 860
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 2000,
+      "cabinDiff": 4.5,
+      "gear": "up",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": false,
+        "strobe": true,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "TA/RA",
+      "autopilot": true,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "cruise",
+    "name": "Cruise",
+    "short": "FL410 • 0.80 M",
+    "icon": "☁️",
+    "color": "sky",
+    "description": "Level at cruise altitude. Cruise N1 set. Autopilot + yaw damper engaged. Mach trim active above 0.78 M. Monitor fuel balance and burn. Cabin altitude stabilized.",
+    "checklist": [
+      "Cruise N1 — SET",
+      "Autopilot + Yaw damper — ENGAGED",
+      "Mach trim — ACTIVE (0.78–0.89 M)",
+      "Fuel balance — MONITOR",
+      "Cabin altitude — STABILIZED",
+      "ATC, weather, route — MONITOR"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 88,
+          "n2": 95,
+          "itt": 780
+        },
+        {
+          "run": true,
+          "n1": 88,
+          "n2": 95,
+          "itt": 780
+        },
+        {
+          "run": true,
+          "n1": 88,
+          "n2": 95,
+          "itt": 780
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 7500,
+      "cabinDiff": 8.8,
+      "gear": "up",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": false,
+        "strobe": true,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "TA/RA",
+      "autopilot": true,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "descent",
+    "name": "Descent",
+    "short": "Top of descent",
+    "icon": "📉",
+    "color": "sky",
+    "description": "Power reduced to descent setting. Speedbrakes available (not within 500 ft AGL). Anti-ice as required entering icing layers. Approach briefing complete. Pressurization schedule for arrival.",
+    "checklist": [
+      "Descent planning — COMPLETE",
+      "Approach briefing — COMPLETE",
+      "Anti-ice — ON if in icing conditions",
+      "Pressurization schedule — SET",
+      "Engine sync — OFF below 18,000 / approach",
+      "Speedbrakes — AS REQUIRED (not <500 AGL)"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 55,
+          "n2": 75,
+          "itt": 520
+        },
+        {
+          "run": true,
+          "n1": 55,
+          "n2": 75,
+          "itt": 520
+        },
+        {
+          "run": true,
+          "n1": 55,
+          "n2": 75,
+          "itt": 520
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 4500,
+      "cabinDiff": 5,
+      "gear": "up",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": false,
+        "strobe": true,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": true,
+        "wing": false,
+        "wshld": true
+      },
+      "transponder": "TA/RA",
+      "autopilot": true,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "approach",
+    "name": "Approach",
+    "short": "Slats → Flaps → Gear",
+    "icon": "🎯",
+    "color": "amber",
+    "description": "Decelerate. Slats extended (≤200 KIAS). Flaps 20° (≤190 KIAS). Gear down (≤190 KIAS). Landing lights on. Final approach speed VREF + 5 (one-engine-inop minimum +5).",
+    "checklist": [
+      "Slats — EXTEND (≤200 KIAS)",
+      "Flaps 20° — SET (≤190 KIAS)",
+      "Gear DOWN (≤190 KIAS) — 3 GREEN",
+      "Flaps 48° — SET (≤175 KIAS, committed to land)",
+      "Landing lights — ON",
+      "VREF + 5 minimum on final",
+      "Brakes #1 — ON for landing"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 65,
+          "n2": 82,
+          "itt": 600
+        },
+        {
+          "run": true,
+          "n1": 65,
+          "n2": 82,
+          "itt": 600
+        },
+        {
+          "run": true,
+          "n1": 65,
+          "n2": 82,
+          "itt": 600
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 1500,
+      "cabinDiff": 1.5,
+      "gear": "down",
+      "flap": 48,
+      "slat": true,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": true,
+        "strobe": true,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": true,
+        "wing": false,
+        "wshld": true
+      },
+      "transponder": "TA/RA",
+      "autopilot": true,
+      "yawDamp": true
+    }
+  },
+  {
+    "id": "landing",
+    "name": "Landing & Rollout",
+    "short": "TD → Reverse → Brakes",
+    "icon": "🛬",
+    "color": "blue",
+    "description": "Touchdown at VREF. Spoilers (auto). Thrust reverser ENG 2 — deploy on touchdown, max 30 sec. Antiskid braking. Decelerate. Clear runway.",
+    "checklist": [
+      "Touchdown at VREF",
+      "Spoilers (airbrake) — AUTO DEPLOY",
+      "Thrust Reverser (ENG 2) — DEPLOY, max 30 sec",
+      "Antiskid — VERIFY (B-bus required)",
+      "Brakes — As required (modulate)",
+      "At taxi speed: Reverser STOW",
+      "Clear runway; lights as required"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 55,
+          "n2": 75,
+          "itt": 550
+        },
+        {
+          "run": true,
+          "n1": 75,
+          "n2": 80,
+          "itt": 600
+        },
+        {
+          "run": true,
+          "n1": 55,
+          "n2": 75,
+          "itt": 550
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 48,
+      "slat": true,
+      "airbrake": true,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": false,
+        "landing": true,
+        "strobe": true,
+        "nav": true
+      },
+      "pitotHeat": true,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "TA/RA",
+      "autopilot": false,
+      "yawDamp": true,
+      "reverser": true
+    }
+  },
+  {
+    "id": "after_landing",
+    "name": "After Landing",
+    "short": "Clean up, taxi to ramp",
+    "icon": "🚖",
+    "color": "emerald",
+    "description": "Off the runway. Stow speedbrakes, retract slats/flaps, recenter trim, transponder STBY, anti-ice off, landing lights off.",
+    "checklist": [
+      "Speedbrakes — RETRACT",
+      "Slats/Flaps — RETRACT (clean)",
+      "Trim — RESET",
+      "Transponder — STBY",
+      "Landing lights — OFF",
+      "Anti-ice — OFF",
+      "Strobes — OFF",
+      "Taxi light — ON"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 480
+        },
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 480
+        },
+        {
+          "run": true,
+          "n1": 42,
+          "n2": 60,
+          "itt": 480
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        true,
+        true,
+        true
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        3000,
+        3000,
+        3000
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": true,
+        "crew": true,
+        "cabin": true
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": true,
+        "position": true,
+        "taxi": true,
+        "landing": false,
+        "strobe": false,
+        "nav": true
+      },
+      "pitotHeat": false,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "STBY",
+      "autopilot": false,
+      "yawDamp": false
+    }
+  },
+  {
+    "id": "shutdown",
+    "name": "Shutdown",
+    "short": "Engines off, secure",
+    "icon": "🔌",
+    "color": "red",
+    "description": "Parked at ramp. Parking brake set. APU started for ground power (optional). Engines to CUTOFF one at a time. APU shutdown. Battery off after all electrics secured.",
+    "checklist": [
+      "Parking brake — SET",
+      "APU — START → RUN (if used for ground)",
+      "APU GEN + APU BLEED — ON",
+      "Engine power levers — CUTOFF (each engine)",
+      "Engine GEN switches — OFF",
+      "Boost pumps — OFF",
+      "Beacon — OFF (after last engine off)",
+      "APU — STOP",
+      "Battery switches — OFF (last)"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 200
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 200
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 200
+        }
+      ],
+      "apu": {
+        "run": true,
+        "n1": 100,
+        "itt": 580,
+        "gen": true,
+        "bleed": false
+      },
+      "gen": [
+        false,
+        false,
+        false
+      ],
+      "battery": true,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": true,
+        "rMain": true,
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "auxC": true,
+        "auxD": true
+      },
+      "stbyPump": false,
+      "hyd": [
+        0,
+        0,
+        0
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": false,
+        "crew": false,
+        "cabin": false
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": false,
+        "position": true,
+        "taxi": false,
+        "landing": false,
+        "strobe": false,
+        "nav": false
+      },
+      "pitotHeat": false,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "OFF",
+      "autopilot": false,
+      "yawDamp": false
+    }
+  },
+  {
+    "id": "secure",
+    "name": "Secured / Cold & Dark",
+    "short": "All off",
+    "icon": "🌙",
+    "color": "slate",
+    "description": "Aircraft secured. APU off, all electrical loads removed, batteries off, parking brake set. Aircraft cold and dark, ready for next crew or maintenance.",
+    "checklist": [
+      "All switches — OFF",
+      "Parking brake — SET (or chocks)",
+      "Logbook entries — COMPLETE",
+      "Walk-around — POST-FLIGHT INSPECTION",
+      "Aircraft secured (doors, covers)"
+    ],
+    "state": {
+      "eng": [
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 25
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 25
+        },
+        {
+          "run": false,
+          "n1": 0,
+          "n2": 0,
+          "itt": 25
+        }
+      ],
+      "apu": {
+        "run": false,
+        "n1": 0,
+        "itt": 25,
+        "gen": false,
+        "bleed": false
+      },
+      "gen": [
+        false,
+        false,
+        false
+      ],
+      "battery": false,
+      "gpu": false,
+      "busTie": "normal",
+      "buses": {
+        "lMain": false,
+        "rMain": false,
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false,
+        "auxC": false,
+        "auxD": false
+      },
+      "stbyPump": false,
+      "hyd": [
+        0,
+        0,
+        0
+      ],
+      "bleed": {
+        "iso": "open",
+        "prv": false,
+        "crew": false,
+        "cabin": false
+      },
+      "cabinAlt": 0,
+      "cabinDiff": 0,
+      "gear": "down",
+      "flap": 0,
+      "slat": false,
+      "airbrake": false,
+      "lights": {
+        "beacon": false,
+        "position": false,
+        "taxi": false,
+        "landing": false,
+        "strobe": false,
+        "nav": false
+      },
+      "pitotHeat": false,
+      "antiIce": {
+        "eng": false,
+        "wing": false,
+        "wshld": false
+      },
+      "transponder": "OFF",
+      "autopilot": false,
+      "yawDamp": false
+    }
+  }
+]

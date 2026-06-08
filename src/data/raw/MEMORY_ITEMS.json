@@ -1,0 +1,170 @@
+[
+  {
+    "title": "Engine Fire In Flight",
+    "cues": [
+      "Fire light ON in associated FIRE PULL handle",
+      "Warning horn sounds"
+    ],
+    "steps": [
+      "Warning Horn — SILENCE",
+      "Power Lever — CUT-OFF",
+      "FIRE PULL — PULLED",
+      "Airspeed — BELOW 250 KIAS",
+      "Fire Extinguisher ENG — POSITION 1",
+      "If fire persists: Fire Extinguisher ENG — POSITION 2",
+      "Affected Engine — SHUT DOWN (see Engine Failure In Flight, E-10)",
+      "Aircraft — LAND AS SOON AS POSSIBLE"
+    ]
+  },
+  {
+    "title": "Engine Fire On Ground",
+    "cues": [
+      "Fire light ON in associated FIRE PULL handle",
+      "Warning horn sounds"
+    ],
+    "steps": [
+      "Power Lever — IDLE",
+      "Airplane — STOP",
+      "Parking Brake — FIRST DETENT",
+      "Power Lever — CUT-OFF",
+      "FIRE PULL — PULLED",
+      "Fire Extinguisher ENG — POSITION 1",
+      "Fire Extinguisher ENG — POSITION 2",
+      "Emergency Evacuation — DO"
+    ]
+  },
+  {
+    "title": "APU Fire",
+    "cues": [
+      "FIRE APU light ON",
+      "Warning horn sounds"
+    ],
+    "steps": [
+      "Warning Horn — SILENCE",
+      "APU MASTER — DEPRESSED",
+      "FIRE APU switch — POSITION 1",
+      "APU BLEED — OFF",
+      "APU GEN — OFF",
+      "If fire persists: Engine 2 FIRE PULL — PULLED; shut down ENG 2",
+      "Aircraft evacuation if necessary (E-106)"
+    ]
+  },
+  {
+    "title": "Tail Pipe Fire",
+    "cues": [
+      "Fire on engine shutdown / start"
+    ],
+    "steps": [
+      "Power Lever — CUT-OFF",
+      "Start Selector — MOTOR START STOP",
+      "Start Pushbutton — HELD DEPRESSED 15 SECONDS"
+    ]
+  },
+  {
+    "title": "Engine Failure During Takeoff — Before V1",
+    "cues": [
+      "Yawing (ENG 1 or 3) or ENG 2 FAIL light"
+    ],
+    "steps": [
+      "Brakes — MAXIMUM PRESSURE",
+      "Power Levers — IDLE",
+      "Airbrake Handle — POSITION 2",
+      "Thrust Reverser — DEPLOYED",
+      "ATC — ADVISE INTENTIONS"
+    ]
+  },
+  {
+    "title": "Engine Failure During Takeoff — After V1",
+    "cues": [
+      "Yawing (ENG 1 or 3) or ENG 2 FAIL light"
+    ],
+    "steps": [
+      "At VR — ROTATE",
+      "Takeoff Attitude — SET",
+      "Establish and maintain — V2 (MINIMUM)",
+      "Landing Gear Handle — UP when positive rate of climb",
+      "At 400 ft AGL min: V2+15 SLATS ONLY; V2+25 CLEAN WING",
+      "Enroute Climb Speed — MAINTAIN 1.5 VS"
+    ]
+  },
+  {
+    "title": "All Engines Out",
+    "cues": [
+      "Loss of thrust all engines"
+    ],
+    "steps": [
+      "C and D Buses — OFF",
+      "Communications — VHF/ATC 1",
+      "Airplane — ESTABLISH WITHIN AIRSTART ENVELOPE",
+      "Battery Load — REDUCE TO 50 AMPS/BATTERY",
+      "Airstarts — SEE AIRSTART (E-11 to E-14)",
+      "If no relight: Prepare Forced Landing/Ditching",
+      "STBY Pump — ON (for emergency slats/flaps)",
+      "Emergency Slats — EXTEND (200 kts max)"
+    ]
+  },
+  {
+    "title": "Smoke Removal / A/C Smoke",
+    "cues": [
+      "Smoke at A/C outlets or in cockpit/cabin"
+    ],
+    "steps": [
+      "Crew Oxygen Masks — DONNED 100% + EMERGENCY",
+      "Smoke Goggles — DONNED, vent valve open",
+      "Microphone Selector — MASK & C'PIT, TESTED",
+      "No Smoking Sign — ON",
+      "Passenger Oxygen Controller — OVERRIDE",
+      "Passenger Masks — DONNED, CHECKED",
+      "Crew Air Gaspers — OPEN",
+      "Bleed Air ISOLATION — ISOLATION; CREW OFF; PRV OFF",
+      "Temp Controllers — MANUAL/COLD"
+    ]
+  },
+  {
+    "title": "High Cabin Altitude / Slow Depressurization",
+    "cues": [
+      "CABIN light ON",
+      "Warning horn",
+      "Cabin alt > 10,000 ft"
+    ],
+    "steps": [
+      "Warning Horn — SILENCE",
+      "Crew Oxygen Masks — DONNED, NORMAL",
+      "Microphone Selector — MASK & C'PIT, TESTED",
+      "Bleed Air CREW, CABIN, PRV — ON or AUTO",
+      "UP–DN Control — BETWEEN 1 AND 2 O'CLOCK",
+      "Cabin Pressure Selector — MAN as required",
+      "If necessary: Passenger Oxygen — DONNED",
+      "Emergency Descent if needed (to 14,000 ft / safe alt)"
+    ]
+  },
+  {
+    "title": "Three Generators Inop",
+    "cues": [
+      "GEN 1, GEN 2, GEN 3 lights ON"
+    ],
+    "steps": [
+      "C and D Buses — OFF",
+      "BUS TIE Switch — FLIGHT NORMAL",
+      "Each Generator — NO MORE THAN 2 RESETS EACH",
+      "Reduce battery load: BOOST/XFR/WINDSHIELD/ANTI-ICE/Interior/Exterior lights — OFF as appropriate",
+      "Icing — AVOID",
+      "Aircraft — LAND AS SOON AS POSSIBLE"
+    ]
+  },
+  {
+    "title": "Inadvertent Flight Thrust Reversal",
+    "cues": [
+      "REV UNLOCK + possibly TRANSIT/DEPLOYED lights",
+      "Pitch-down moment",
+      "Abnormal noise/buffeting"
+    ],
+    "steps": [
+      "Engine 2 — IDLE",
+      "Thrust Reverser NORM/STOW Switch — STOW",
+      "Reduce Airspeed to — 230 KIAS (or less)",
+      "If stows: Continue; switch REMAINS STOWED",
+      "If remains deployed: LAND ASAP (One Engine Inop)"
+    ]
+  }
+]

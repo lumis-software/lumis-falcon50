@@ -1,0 +1,147 @@
+{
+  "shared": [
+    {
+      "cat": "Regs (135)",
+      "q": "What are the basic IFR fuel requirements under FAR 135.223?",
+      "a": "Fly to destination → fly from destination to alternate (if required) → fly 45 minutes at normal cruise after that. Alternate is required when destination weather at ETA ± 1 hour is below 2,000 / 3 statute miles."
+    },
+    {
+      "cat": "Regs (135)",
+      "q": "When can a 135 PIC begin descent below DA/MDA on an instrument approach?",
+      "a": "Per 91.175(c) / 135.225: aircraft continuously in a position from which descent at normal rate using normal maneuvers can be made to landing within the touchdown zone, flight visibility = or > minimums, AND at least one required visual reference is distinctly visible (approach lights, runway, threshold, REIL, VASI, touchdown zone, TDZ markings, etc.)."
+    },
+    {
+      "cat": "Weather",
+      "q": "Define icing conditions for our airplane and when do you turn anti-ice on?",
+      "a": "Icing conditions: visible moisture at OAT 10°C or below on the ground, or TAT 10°C or below in flight. Turn anti-ice ON before entering, leave it ON until clear of conditions plus a safety margin. Engine anti-ice first, then airframe, then windshield/pitot as appropriate."
+    },
+    {
+      "cat": "Weather",
+      "q": "What's the difference between rime, clear, and mixed ice?",
+      "a": "Rime: small supercooled droplets freeze on contact, opaque, brittle, easy for boots/heated leading edges to remove. Clear (glaze): large droplets, freeze slowly, hard transparent ice that conforms to airfoil and is harder to shed — biggest performance concern. Mixed: combination. SLD (supercooled large droplets) freeze aft of the protected zone — exit conditions immediately."
+    },
+    {
+      "cat": "Aerodynamics",
+      "q": "What is Mach tuck and how does our airplane handle it?",
+      "a": "At high Mach, shock waves form on the upper wing and the center of pressure shifts aft, causing a nose-down pitching moment ('Mach tuck'). The Falcon's Mach Trim system commands stabilizer nose-up automatically (0.4° in the 50, varies by type) between defined Mach numbers to counteract this. If Mach Trim is inop and autopilot is off, the AFM limits Mach to keep you out of the tuck region."
+    },
+    {
+      "cat": "ADM / CRM",
+      "q": "Describe your decision-making process for an in-flight engine failure.",
+      "a": "Aviate–Navigate–Communicate. (1) Maintain control of the aircraft — pitch and power for VYSE. (2) Confirm the failed engine (verify with all instruments before securing). (3) Run the memory items (silence horn, power lever cutoff, fire pull if appropriate). (4) Pull out the QRH for the printed checklist. (5) Decide: continue or divert based on terrain, weight, weather, fuel. (6) Declare. (7) Brief the crew and passengers. (8) Plan the approach early — engine-out approach speeds and configuration are different."
+    },
+    {
+      "cat": "Weight & Balance",
+      "q": "What happens if you take off with the CG too far aft? Too far forward?",
+      "a": "Aft CG: reduced longitudinal stability, harder to recover from a stall, less elevator authority to lower the nose, increased risk of departure stall. Forward CG: harder to rotate at Vr, increased stall speed, higher landing speeds, may run out of nose-up trim authority on landing (especially with full flaps). Both reduce range due to higher induced drag from trim."
+    },
+    {
+      "cat": "Performance",
+      "q": "What is balanced field length?",
+      "a": "The runway length at which accelerate–stop distance equals accelerate–go distance for a given weight, altitude, temperature, and configuration. At that point V1 is selected so that if the failure happens AT V1, you have exactly enough runway to either reject and stop, or continue and clear obstacles. Below BFL you reduce V1; above BFL you cannot dispatch without performance limitations."
+    }
+  ],
+  "f50": [
+    {
+      "cat": "F-50 Systems",
+      "q": "Walk me through the hydraulic systems on the Falcon 50.",
+      "a": "Three independent hydraulic systems, each 3,000 psi, MIL-H-5606 fluid. System 1 driven by ENG 1's engine-driven pump — primary flight controls, normal brakes with antiskid, nose wheel steering. System 2 driven by ENG 3's pump — parallel with #1 on primary FCs, emergency brake source. System 3 driven by ENG 2's pump — NWS, airbrakes, landing gear, flaps/slats, thrust reverser. Important: system number does NOT match engine number for 2/3 — common oral trap. Electric standby pump backs up Sys 1, max 45,000 ft."
+    },
+    {
+      "cat": "F-50 Systems",
+      "q": "Tell me about the electrical system architecture.",
+      "a": "Three engine-driven generators, two Ni-Cad batteries, APU generator (ground only). Architecture is LEFT vs RIGHT, not 1/2/3. GEN 1 and GEN 2 BOTH feed the Left Main DC bus. GEN 3 feeds the Right Main DC bus alone. Lose GEN 3, you must tie the bus tie to repower Right Main from left side. Antiskid is on B bus (Right Main) — lose Right Main, lose antiskid."
+    },
+    {
+      "cat": "F-50 Memory Items",
+      "q": "Recite the engine fire in flight memory items.",
+      "a": "Warning horn — silence. Power lever — CUT-OFF. Fire pull — PULLED. Airspeed — below 250 KIAS. Fire extinguisher ENG — POSITION 1. If fire persists — POSITION 2. Then shut down the affected engine per the printed checklist. Land as soon as possible."
+    },
+    {
+      "cat": "F-50 Memory Items",
+      "q": "All engines out — what are your immediate actions?",
+      "a": "C and D buses OFF. Communications VHF/ATC 1. Establish within airstart envelope. Battery load reduce to 50 amps per battery. Airstarts — see procedure E-11 through E-14. If no relight: prepare forced landing or ditching, STBY pump ON, emergency slats EXTEND at 200 kts max, landing gear DOWN at VLO 190 if forced landing anticipated."
+    },
+    {
+      "cat": "F-50 Limitations",
+      "q": "What are VMO and MMO?",
+      "a": "VMO is 350 KIAS at sea level, increasing linearly to 370 KIAS at 10,000 ft, then 370 KIAS up to 24,000 ft. MMO above 24,000 ft is 0.86 Mach. VLO/MLO 190 KIAS / 0.70 M. VLE 220 KIAS / 0.75 M. VMCA 82.5 KIAS. Turbulent air penetration 280 KIAS / 0.76 M."
+    },
+    {
+      "cat": "F-50 Limitations",
+      "q": "Engine limits — N1, N2, and ITT?",
+      "a": "N1 max takeoff and max continuous 101.5%. N2 max 100%. Transient N1 103% (1 min), 105% (5 sec). ITT during takeoff: 907°C max for 5 minutes. Max continuous ITT 885°C. Transient ITT during start: 927°C for 10 sec, 977°C for 5 sec on the -3-1C."
+    },
+    {
+      "cat": "F-50 Procedures",
+      "q": "Antiskid fails during landing rollout. What do you do?",
+      "a": "Select EMER BRAKE — that switches to System 2 accumulator pressure. There is NO antiskid in EMER mode, so modulate brakes manually to prevent tire blowouts. Thrust reverser if already deployed, keep it deployed. Parking brake is the last resort if directional control allows. This is the N114TD Greenville lesson — the crew did NOT do this and they overran a 5,393-foot runway with fatal results."
+    },
+    {
+      "cat": "F-50 Procedures",
+      "q": "Three generators inoperative — what's your battery duration and what do you load-shed?",
+      "a": "Batteries in good condition give about 20 minutes at 50 A average load per battery. Set BUS TIE to FLIGHT NORMAL. Switch C and D buses OFF. Load-shed: boost pumps, windshield heat, pitot heat (if not in icing), interior and exterior lights, anti-ice (if not needed). Land as soon as possible. The C bus runs flaps, rudder trim, emergency aileron trim. The D bus runs nose wheel steering and normal aileron trim — know what you lose."
+    }
+  ],
+  "f50ex": [
+    {
+      "cat": "F-50EX Engines",
+      "q": "How does the -40 engine differ from the -3-1C and what does the DEEC do for you?",
+      "a": "Same nominal 3,700 lb thrust at sea level, but the -40 is flat-rated to higher ambient temperatures so it retains thrust on hot days at altitude. The DEEC (Digital Electronic Engine Control) handles the start sequence automatically — it schedules fuel based on N2 and ambient conditions, and it protects against hot/hung starts. You don't ride the ITT gauge during start the way you must on the -3-1C. Watch for DEEC fault annunciators."
+    },
+    {
+      "cat": "F-50EX Avionics",
+      "q": "Walk me through the Collins Pro Line 4 layout in the 50EX.",
+      "a": "Four 7.25 × 7.25-inch CRT displays in a T-layout: two outboard PFDs, two stacked center displays (typically MFD on top, EICAS / Nav on bottom). Dual digital air data computers, AlliedSignal GNS-XMS FMS, TWR-850 Doppler turbulence radar. Significant generational leap from the EFIS-86C in the base Falcon 50 — integrated FMS bus, glass engine instruments, and modern radio tuning units."
+    },
+    {
+      "cat": "F-50EX Type Rating",
+      "q": "Same type rating as the base Falcon 50?",
+      "a": "Yes — both 50 and 50EX share the DA-50 type rating. Differences training between them is Level C/C per the FSBR, meaning a systems-fidelity device or higher is required for both training and checking. Don't assume a base-50 pilot can jump in an EX without differences training."
+    }
+  ],
+  "f900": [
+    {
+      "cat": "F-900 Hydraulics",
+      "q": "How are the 900's hydraulics different from the Falcon 50?",
+      "a": "The 900 has TWO hydraulic systems, not three. ENG 1 drives Sys 1 (and the Left main bus). ENG 2 drives Sys 2 (and Right main bus). ENG 3 is a backup that can power either system and either bus. Loss of ENG 3 has different consequences than losing ENG 1 or ENG 2 — that's a near-certain oral question. Don't transfer the F50's three-system mental model directly."
+    },
+    {
+      "cat": "F-900 Flight Controls",
+      "q": "What's the normal final landing flap setting?",
+      "a": "SLATS + FLAPS 40 on the Falcon 900. Different from the F-50 / 50EX which is SLATS + FLAPS 48. This is in the FAA FSBR §13.3 explicitly."
+    },
+    {
+      "cat": "F-900 Lessons",
+      "q": "Tell me about Olympic Airways Flight 3838.",
+      "a": "September 14, 1999, a Falcon 900B with SX-ECH near Bucharest. The PITCH FEEL caution annunciator was on continuously during cruise and descent. During descent IAS climbed from 240 to 332 KIAS — autopilot disengaged. The captain manually flew the aircraft and induced violent pitch oscillations for about 96 seconds, throwing unbelted passengers around the cabin. Seven fatalities including the Greek deputy foreign minister, two seriously injured. Lessons: respond to PITCH FEEL caution immediately, don't override autopilot pitch channel with manual inputs at high speed, brief passengers on seatbelt discipline in descent. This is the 900 family's equivalent of the N114TD Greenville case study — required reading."
+    },
+    {
+      "cat": "F-900 Type Rating",
+      "q": "Are all 900 variants on the same type rating as the Falcon 50?",
+      "a": "Falcon 900, 900B, 900C, and 900EX (non-EASy) are all on the DA-50 type rating along with the Falcon 50 and 50EX. The EASy variants — 900EX EASy, 900DX, 900LX — are a SEPARATE type rating: DA-EASY. A DA-50-rated pilot cannot legally fly an EASy 900 without separate training, checking, and rating issuance."
+    },
+    {
+      "cat": "F-900 Performance",
+      "q": "What's the FSBR special-emphasis item for heavy takeoffs?",
+      "a": "Take-off with forward CG in heavy configuration. The horizontal stabilizer trim must be set correctly for weight and CG. The N823RC accident at Montgomery Field (MYF) in 2021 is the case study — the crew had stab trim at -5.73° when it should have been -7.5° for that weight, and was 2,975 lb over MTOW. The EASy FMS would have suppressed the takeoff card with FIELD LIMITED amber message had MTOW been entered correctly — the crew ignored it."
+    }
+  ],
+  "f900easy": [
+    {
+      "cat": "F-900 EASy Type Rating",
+      "q": "What's the type rating story for EASy variants?",
+      "a": "EASy variants (900EX EASy, 900DX, 900LX) are on the DA-EASY type rating — SEPARATE from the DA-50 rating that covers F-50, F-50EX, F-900, F-900B, F-900C, and F-900EX (non-EASy). This is explicit in the FAA FSBR §7.1. Pilots with DA-50 type cannot legally fly an EASy aircraft."
+    },
+    {
+      "cat": "F-900 EASy Avionics",
+      "q": "Describe the EASy cockpit.",
+      "a": "Honeywell Primus Epic core, four large landscape LCDs — two outboard PFDs, two stacked center MDUs. Cursor Control Devices (CCDs) for menu navigation. Integrated FMS, integrated maintenance system, integrated autothrottle. Graphical Flight Planning, SmartView SVS (Synthetic Vision System), RAAS Smart Runway / Smart Landing callouts. EASy II (2011 onward) adds NextGen ATC capability, CPDLC, ADS-B Out."
+    },
+    {
+      "cat": "F-900 EASy Variants",
+      "q": "What's the difference between the 900EX EASy, DX, and LX?",
+      "a": "900EX EASy: 900EX airframe + engines, EASy I cockpit. 900DX: budget version with EASy II cockpit and -60 engines BUT a redesigned (smaller) fuel system, reducing range from 4,500 to 4,100 nmi. 900LX: 900EX with Aviation Partners blended winglets, 10% climb improvement, range up to 4,750 nmi, optional FalconEye Combined Vision System HUD."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Powerplant",
+    "icon": "🔥",
+    "sysKey": "pp",
+    "desc": "Three Honeywell (Garrett) TFE 731-3-1C turbofan engines, 3,700 lbs takeoff thrust each at SL/ISA. ENG 1 and ENG 3 mounted in pods on the aft fuselage; ENG 2 in the tail with an S-duct inlet door. N1 is the thrust setting parameter. ITT is the temperature-limit parameter. Max N1 101.5% / N2 100% takeoff and max continuous.",
+    "keys": [
+      "N1 = thrust setting parameter (not N2)",
+      "ITT limits: 907°C T/O normal, 885°C Max Continuous",
+      "Oil press: 38–46 PSI normal; 25 PSI min idle",
+      "ENG 2 has unique air inlet door — failure shows ENG 2 FAIL light",
+      "Engine Synchronizer prohibited for T/O, landing, missed approach"
+    ]
+  },
+  {
+    "name": "APU",
+    "icon": "🛠️",
+    "sysKey": "pp",
+    "desc": "Auxiliary Power Unit installed in the aft fuselage. Used on ground for electrical and bleed-air loads. Ground operation only. With APU BLEED ON, engine and airframe anti-ice tests are prohibited. Provides 300 A of generator output.",
+    "keys": [
+      "Ground operation only",
+      "Max rated N1 100%, max allowable 110%",
+      "ITT 680°C rated, 732°C max allowable",
+      "No anti-ice tests with APU BLEED ON",
+      "Bleed valve failed open: reduce engine power"
+    ]
+  },
+  {
+    "name": "Hydraulics",
+    "icon": "🟦",
+    "sysKey": "hyd",
+    "desc": "Three independent hydraulic systems. System 1 (ENG 1) feeds primary flight controls and brakes; System 2 (ENG 3) is parallel for redundancy; System 3 (ENG 2) drives nose wheel steering, airbrakes, gear, flaps, slats. An electric STBY pump backs up System 1 (alt limit 45,000 ft). Fluid is MIL-H-5606. With either or both hyd systems inop, max speed 260 KIAS / 0.76 M.",
+    "keys": [
+      "Three engine-driven pumps (one per engine)",
+      "STBY pump backs up Sys 1 — 45,000 ft max",
+      "Loss of Sys 1: emergency slats, manual gear, #2 OFF for brakes",
+      "Loss of Sys 3 = no NWS, airbrakes, normal gear",
+      "Fluid: MIL-H-5606"
+    ]
+  },
+  {
+    "name": "Electrical",
+    "icon": "⚡",
+    "sysKey": "dcelec",
+    "desc": "28 VDC DC system with three engine-driven generators (one per engine) and three Ni-Cd batteries. Four main DC buses: A, B, C, D. Bus Tie can be set FLIGHT NORMAL or TIED. Two static inverters provide 115 VAC for AC loads (max 750 VA each). Max DC bus voltage 32 V. Generator output 300 A up to 39,000 ft, 250 A above.",
+    "keys": [
+      "3 generators (one per engine) + APU gen on ground",
+      "Buses: A, B, C, D — BUS TIE switch",
+      "Inverters: max 750 VA each",
+      "Battery: WARM 120°F amber, HOT 150°F red",
+      "GPU max 1,000 A / 28 VDC"
+    ]
+  },
+  {
+    "name": "Fuel",
+    "icon": "⛽",
+    "sysKey": "fuel",
+    "desc": "Three independent fuel systems (Left, Right, Center) totaling 15,514 lbs. Each engine has a dedicated feeder tank, boost pump, and transfer pump. Pressure refueling at the single point — max 50 PSI. Fuel computers must be operational for takeoff. No imbalance limit for flight.",
+    "keys": [
+      "3 systems: Left, Right, Center wings",
+      "Total ≈ 15,514 lbs (15,458 w/ SB 496)",
+      "Boost & XFR pumps each system",
+      "Pressure fueling max 50 PSI",
+      "Fuel computers operational for T/O (except AFM Annex 5)"
+    ]
+  },
+  {
+    "name": "Pneumatics / Bleed Air",
+    "icon": "💨",
+    "sysKey": "bleed",
+    "desc": "Bleed air taps from each engine's LP and HP ports. The bleed system supplies the environmental control system (ECU — Cabin & Crew), pressurization, anti-ice, fuel tank pressurization, and S-duct anti-ice. CABIN, CREW, and PRV switches control flow. APU bleed available on the ground.",
+    "keys": [
+      "LP & HP bleed from each engine",
+      "ECU Cabin and Crew air conditioning",
+      "PRV = Pressure Regulating Valve",
+      "ISOLATION valve isolates left/right halves",
+      "BLEED OVHT light: PRV OFF, then sequence HP1/HP2/HP3"
+    ]
+  },
+  {
+    "name": "Environmental / Pressurization",
+    "icon": "🌡️",
+    "sysKey": "env",
+    "desc": "Two independent ECU packs — Crew and Cabin — provide conditioned air. Pressurization uses an outflow valve controlled by the cabin pressure controller. Maximum differential 9.1 psi (9.5 w/ SB163). Automatic and manual modes via the UP–DN control.",
+    "keys": [
+      "Max differential 9.1 psi (9.5 w/ SB163)",
+      "Cabin alt > 10,000 ft → CABIN warning + horn",
+      "DUMP switch for rapid depressurization",
+      "Smoke removal: descend below 12,000 ft, then DUMP + DV window"
+    ]
+  },
+  {
+    "name": "Flight Controls",
+    "icon": "✈️",
+    "sysKey": "fc",
+    "desc": "Conventional hydraulically-powered ailerons, elevators, and rudder. High-lift devices: leading-edge slats and trailing-edge flaps (positions: Slats only, Slats+20°, Slats+48°). Two-section airbrakes. Auto-slat extension at high AoA. Mach trim. Arthur Q feel system on elevator. Yaw damper required for cruise.",
+    "keys": [
+      "Slats — 200 KIAS max",
+      "Slats + Flaps 20° — 190 KIAS",
+      "Slats + Flaps 48° — 175 KIAS",
+      "Auto-slat: 270 KIAS max with light ON",
+      "Airbrakes: not within 500 ft AGL"
+    ]
+  },
+  {
+    "name": "Avionics",
+    "icon": "📡",
+    "desc": "Collins EFIS 86C14 with dual ADCs, dual FDS, APS-80 or APS-85 autopilot with autothrottle, dual VHF, dual VOR/LOC/GS, ADF, DME, transponders, weather radar, GPWS/EGPWS, TCAS. Yaw damper integrated with autopilot.",
+    "keys": [
+      "APS 80/85 autopilot — OFF for T/O & landing",
+      "Min A/P altitude enroute: 1,000 ft",
+      "Min A/P approach: 50 ft (RA op) / 100 ft (RA inop)",
+      "Mach Trim inop + A/P off → max 0.78 M",
+      "Collins EFIS 86C14"
+    ]
+  },
+  {
+    "name": "Anti-Ice & Rain",
+    "icon": "❄️",
+    "sysKey": "ai",
+    "desc": "Engine inlet anti-ice (bleed-air heated lip), airframe (wing, slat, S-duct) anti-ice, windshield electric heat, pitot heat. Icing conditions: OAT < 10°C with visible moisture on ground, TAT 10°C in-flight. Engine/Wing anti-ice prohibited with OAT > 10°C.",
+    "keys": [
+      "Engine + Wing A/I prohibited OAT > 10°C",
+      "Wing A/I ground: testing only, short duration",
+      "Late activation: rapid Eng-then-Wing A/I",
+      "Min N1 for anti-ice — see E-74",
+      "Windshield heat req'd in icing"
+    ]
+  },
+  {
+    "name": "Landing Gear & Brakes",
+    "icon": "🛬",
+    "sysKey": "gear",
+    "desc": "Tricycle gear, hydraulically actuated. Nose wheel steering powered by Hyd Sys 3. Anti-skid system (must be operative for dispatch). Emergency gear extension by gravity (Hyd Sys 1 powers normal). Brake kinetic energy limits: 14,697 KJ normal RTO, 18,249 KJ max RTO.",
+    "keys": [
+      "VLO/MLO 190 KIAS / 0.70 M",
+      "VLE/MLE 220 KIAS / 0.75 M",
+      "Anti-skid must be operative",
+      "Nose tires: chinned tires required",
+      "Tire ground speed limit: 180 kts"
+    ]
+  },
+  {
+    "name": "Thrust Reverser",
+    "icon": "↩️",
+    "sysKey": "gear",
+    "desc": "ENG 2 only. Ground use only. Max N1 in reverse: 93%. Recommend 30 seconds continuous max and 4.5 minutes between consecutive uses. Reverser deployed in-flight: 230 KIAS limit. Go-around prohibited after thrust reverse selected.",
+    "keys": [
+      "ENG 2 only — ground use only",
+      "Max N1 reverse: 93%",
+      "30 sec continuous / 4.5 min between uses",
+      "In-flight deployed: 230 KIAS limit",
+      "No GA after reverser selected"
+    ]
+  }
+]

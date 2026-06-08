@@ -1,0 +1,960 @@
+{
+  "bat1": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BAT 1",
+    "x": 40,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "bat2": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BAT 2",
+    "x": 100,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "busTie": {
+    "panel": "overhead",
+    "type": "3sw",
+    "states": [
+      "NORM",
+      "TIED",
+      "OFF"
+    ],
+    "def": 0,
+    "label": "BUS TIE",
+    "x": 175,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "gen1": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "GEN 1",
+    "x": 260,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "gen2": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "GEN 2",
+    "x": 320,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "gen3": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "GEN 3",
+    "x": 380,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "cBus": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "C BUS",
+    "x": 450,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "dBus": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "D BUS",
+    "x": 510,
+    "y": 50,
+    "group": "Electrical"
+  },
+  "apuMaster": {
+    "panel": "overhead",
+    "type": "3sw",
+    "states": [
+      "OFF",
+      "START",
+      "RUN"
+    ],
+    "def": 0,
+    "label": "APU MASTER",
+    "x": 40,
+    "y": 130,
+    "group": "APU"
+  },
+  "apuGen": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "APU GEN",
+    "x": 130,
+    "y": 130,
+    "group": "APU"
+  },
+  "apuBleed": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "APU BLEED",
+    "x": 200,
+    "y": 130,
+    "group": "APU"
+  },
+  "pitotHt": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "PITOT HEAT",
+    "x": 280,
+    "y": 130,
+    "group": "Anti-Ice"
+  },
+  "engAI1": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "ENG 1 A/I",
+    "x": 360,
+    "y": 130,
+    "group": "Anti-Ice"
+  },
+  "engAI2": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "ENG 2 A/I",
+    "x": 420,
+    "y": 130,
+    "group": "Anti-Ice"
+  },
+  "engAI3": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "ENG 3 A/I",
+    "x": 480,
+    "y": 130,
+    "group": "Anti-Ice"
+  },
+  "wingAI": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "WING A/I",
+    "x": 540,
+    "y": 130,
+    "group": "Anti-Ice"
+  },
+  "wshldL": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "WSHLD L",
+    "x": 40,
+    "y": 210,
+    "group": "Anti-Ice"
+  },
+  "wshldR": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "WSHLD R",
+    "x": 100,
+    "y": 210,
+    "group": "Anti-Ice"
+  },
+  "beacon": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BEACON",
+    "x": 180,
+    "y": 210,
+    "group": "Lights"
+  },
+  "navLt": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "NAV",
+    "x": 240,
+    "y": 210,
+    "group": "Lights"
+  },
+  "strobe": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "STROBE",
+    "x": 300,
+    "y": 210,
+    "group": "Lights"
+  },
+  "landingLt": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "LANDING",
+    "x": 360,
+    "y": 210,
+    "group": "Lights"
+  },
+  "taxiLt": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "TAXI",
+    "x": 420,
+    "y": 210,
+    "group": "Lights"
+  },
+  "ap": {
+    "panel": "glareshield",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "A/P",
+    "x": 100,
+    "y": 40,
+    "group": "AFCS"
+  },
+  "yawDamp": {
+    "panel": "glareshield",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "YAW DAMP",
+    "x": 200,
+    "y": 40,
+    "group": "AFCS"
+  },
+  "machTrim": {
+    "panel": "glareshield",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "MACH TRIM",
+    "x": 320,
+    "y": 40,
+    "group": "AFCS"
+  },
+  "fdTest": {
+    "panel": "glareshield",
+    "type": "button",
+    "states": [
+      "—",
+      "TEST"
+    ],
+    "def": 0,
+    "label": "FD TEST",
+    "x": 440,
+    "y": 40,
+    "group": "AFCS"
+  },
+  "power1": {
+    "panel": "pedestal",
+    "type": "lever",
+    "states": [
+      "CUTOFF",
+      "IDLE",
+      "CRUISE",
+      "T/O"
+    ],
+    "def": 0,
+    "label": "ENG 1 PWR",
+    "x": 40,
+    "y": 50,
+    "group": "Engines"
+  },
+  "power2": {
+    "panel": "pedestal",
+    "type": "lever",
+    "states": [
+      "CUTOFF",
+      "IDLE",
+      "CRUISE",
+      "T/O"
+    ],
+    "def": 0,
+    "label": "ENG 2 PWR",
+    "x": 120,
+    "y": 50,
+    "group": "Engines"
+  },
+  "power3": {
+    "panel": "pedestal",
+    "type": "lever",
+    "states": [
+      "CUTOFF",
+      "IDLE",
+      "CRUISE",
+      "T/O"
+    ],
+    "def": 0,
+    "label": "ENG 3 PWR",
+    "x": 200,
+    "y": 50,
+    "group": "Engines"
+  },
+  "start1": {
+    "panel": "pedestal",
+    "type": "3sw",
+    "states": [
+      "MOTOR STOP",
+      "GND START",
+      "AIR START"
+    ],
+    "def": 1,
+    "label": "START SEL 1",
+    "x": 40,
+    "y": 160,
+    "group": "Engines"
+  },
+  "start2": {
+    "panel": "pedestal",
+    "type": "3sw",
+    "states": [
+      "MOTOR STOP",
+      "GND START",
+      "AIR START"
+    ],
+    "def": 1,
+    "label": "START SEL 2",
+    "x": 120,
+    "y": 160,
+    "group": "Engines"
+  },
+  "start3": {
+    "panel": "pedestal",
+    "type": "3sw",
+    "states": [
+      "MOTOR STOP",
+      "GND START",
+      "AIR START"
+    ],
+    "def": 1,
+    "label": "START SEL 3",
+    "x": 200,
+    "y": 160,
+    "group": "Engines"
+  },
+  "startPB1": {
+    "panel": "pedestal",
+    "type": "button",
+    "states": [
+      "—",
+      "PRESS"
+    ],
+    "def": 0,
+    "label": "START 1",
+    "x": 40,
+    "y": 230,
+    "group": "Engines"
+  },
+  "startPB2": {
+    "panel": "pedestal",
+    "type": "button",
+    "states": [
+      "—",
+      "PRESS"
+    ],
+    "def": 0,
+    "label": "START 2",
+    "x": 120,
+    "y": 230,
+    "group": "Engines"
+  },
+  "startPB3": {
+    "panel": "pedestal",
+    "type": "button",
+    "states": [
+      "—",
+      "PRESS"
+    ],
+    "def": 0,
+    "label": "START 3",
+    "x": 200,
+    "y": 230,
+    "group": "Engines"
+  },
+  "reverser": {
+    "panel": "pedestal",
+    "type": "2sw",
+    "states": [
+      "STOW",
+      "DEPLOY"
+    ],
+    "def": 0,
+    "label": "REVERSER 2",
+    "x": 290,
+    "y": 50,
+    "group": "Engines"
+  },
+  "slatFlap": {
+    "panel": "pedestal",
+    "type": "4sw",
+    "states": [
+      "CLEAN",
+      "SLATS",
+      "S+20°",
+      "S+48°"
+    ],
+    "def": 0,
+    "label": "SLAT/FLAP",
+    "x": 290,
+    "y": 130,
+    "group": "Flight Controls"
+  },
+  "airbrake": {
+    "panel": "pedestal",
+    "type": "3sw",
+    "states": [
+      "IN",
+      "POS 1",
+      "POS 2"
+    ],
+    "def": 0,
+    "label": "AIRBRAKE",
+    "x": 290,
+    "y": 210,
+    "group": "Flight Controls"
+  },
+  "brakeSel": {
+    "panel": "pedestal",
+    "type": "2sw",
+    "states": [
+      "NORM",
+      "EMER"
+    ],
+    "def": 0,
+    "label": "BRAKE SEL",
+    "x": 400,
+    "y": 50,
+    "group": "Hydraulic"
+  },
+  "parkBrk": {
+    "panel": "pedestal",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "SET"
+    ],
+    "def": 0,
+    "label": "PARK BRK",
+    "x": 400,
+    "y": 130,
+    "group": "Hydraulic"
+  },
+  "stbyPump": {
+    "panel": "pedestal",
+    "type": "3sw",
+    "states": [
+      "OFF",
+      "AUTO",
+      "ON"
+    ],
+    "def": 1,
+    "label": "STBY PUMP",
+    "x": 400,
+    "y": 210,
+    "group": "Hydraulic"
+  },
+  "firePull1": {
+    "panel": "fire",
+    "type": "pull",
+    "states": [
+      "IN",
+      "PULL"
+    ],
+    "def": 0,
+    "label": "FIRE PULL 1",
+    "x": 60,
+    "y": 50,
+    "group": "Fire"
+  },
+  "firePull2": {
+    "panel": "fire",
+    "type": "pull",
+    "states": [
+      "IN",
+      "PULL"
+    ],
+    "def": 0,
+    "label": "FIRE PULL 2",
+    "x": 160,
+    "y": 50,
+    "group": "Fire"
+  },
+  "firePull3": {
+    "panel": "fire",
+    "type": "pull",
+    "states": [
+      "IN",
+      "PULL"
+    ],
+    "def": 0,
+    "label": "FIRE PULL 3",
+    "x": 260,
+    "y": 50,
+    "group": "Fire"
+  },
+  "fireApu": {
+    "panel": "fire",
+    "type": "pull",
+    "states": [
+      "IN",
+      "PULL"
+    ],
+    "def": 0,
+    "label": "FIRE APU",
+    "x": 360,
+    "y": 50,
+    "group": "Fire"
+  },
+  "fireExt1": {
+    "panel": "fire",
+    "type": "3sw",
+    "states": [
+      "—",
+      "POS 1",
+      "POS 2"
+    ],
+    "def": 0,
+    "label": "EXT 1",
+    "x": 60,
+    "y": 140,
+    "group": "Fire"
+  },
+  "fireExt2": {
+    "panel": "fire",
+    "type": "3sw",
+    "states": [
+      "—",
+      "POS 1",
+      "POS 2"
+    ],
+    "def": 0,
+    "label": "EXT 2",
+    "x": 160,
+    "y": 140,
+    "group": "Fire"
+  },
+  "fireExt3": {
+    "panel": "fire",
+    "type": "3sw",
+    "states": [
+      "—",
+      "POS 1",
+      "POS 2"
+    ],
+    "def": 0,
+    "label": "EXT 3",
+    "x": 260,
+    "y": 140,
+    "group": "Fire"
+  },
+  "warnHorn": {
+    "panel": "fire",
+    "type": "button",
+    "states": [
+      "—",
+      "SILENCE"
+    ],
+    "def": 0,
+    "label": "WARN HORN",
+    "x": 360,
+    "y": 140,
+    "group": "Fire"
+  },
+  "boost1": {
+    "panel": "fire",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BOOST 1",
+    "x": 60,
+    "y": 220,
+    "group": "Fuel"
+  },
+  "boost2": {
+    "panel": "fire",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BOOST 2",
+    "x": 130,
+    "y": 220,
+    "group": "Fuel"
+  },
+  "boost3": {
+    "panel": "fire",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BOOST 3",
+    "x": 200,
+    "y": 220,
+    "group": "Fuel"
+  },
+  "xfrL": {
+    "panel": "fire",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "XFR L",
+    "x": 270,
+    "y": 220,
+    "group": "Fuel"
+  },
+  "xfrC": {
+    "panel": "fire",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "XFR C",
+    "x": 330,
+    "y": 220,
+    "group": "Fuel"
+  },
+  "xfrR": {
+    "panel": "fire",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "XFR R",
+    "x": 390,
+    "y": 220,
+    "group": "Fuel"
+  },
+  "bleedISO": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OPEN",
+      "CLOSED"
+    ],
+    "def": 0,
+    "label": "ISO VALVE",
+    "x": 60,
+    "y": 50,
+    "group": "Bleed"
+  },
+  "bleedPRV": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "AUTO"
+    ],
+    "def": 0,
+    "label": "PRV",
+    "x": 150,
+    "y": 50,
+    "group": "Bleed"
+  },
+  "bleedCabin": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "CABIN BLEED",
+    "x": 240,
+    "y": 50,
+    "group": "Bleed"
+  },
+  "bleedCrew": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "CREW BLEED",
+    "x": 340,
+    "y": 50,
+    "group": "Bleed"
+  },
+  "bleedBag": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "BAG BLEED",
+    "x": 440,
+    "y": 50,
+    "group": "Bleed"
+  },
+  "hpEng1": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "HP 1",
+    "x": 60,
+    "y": 130,
+    "group": "Bleed"
+  },
+  "hpEng2": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "HP 2",
+    "x": 130,
+    "y": 130,
+    "group": "Bleed"
+  },
+  "hpEng3": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "HP 3",
+    "x": 200,
+    "y": 130,
+    "group": "Bleed"
+  },
+  "pressSel": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "AUTO",
+      "MAN"
+    ],
+    "def": 0,
+    "label": "PRESS SEL",
+    "x": 290,
+    "y": 130,
+    "group": "Pressurization"
+  },
+  "cabinPress": {
+    "panel": "bleed",
+    "type": "3sw",
+    "states": [
+      "NORM",
+      "DUMP",
+      "RAM"
+    ],
+    "def": 0,
+    "label": "CABIN PRESS",
+    "x": 390,
+    "y": 130,
+    "group": "Pressurization"
+  },
+  "o2Crew": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "NORM",
+      "100%+EMER"
+    ],
+    "def": 0,
+    "label": "CREW O2",
+    "x": 60,
+    "y": 210,
+    "group": "Oxygen"
+  },
+  "o2Pax": {
+    "panel": "bleed",
+    "type": "3sw",
+    "states": [
+      "NORM",
+      "ON",
+      "OVERRIDE"
+    ],
+    "def": 0,
+    "label": "PAX O2",
+    "x": 170,
+    "y": 210,
+    "group": "Oxygen"
+  },
+  "smokeMask": {
+    "panel": "bleed",
+    "type": "2sw",
+    "states": [
+      "STOWED",
+      "DONNED"
+    ],
+    "def": 0,
+    "label": "SMK MASK",
+    "x": 290,
+    "y": 210,
+    "group": "Oxygen"
+  },
+  "micSel": {
+    "panel": "bleed",
+    "type": "3sw",
+    "states": [
+      "NORM",
+      "MASK",
+      "C'PIT"
+    ],
+    "def": 0,
+    "label": "MIC SEL",
+    "x": 380,
+    "y": 210,
+    "group": "Oxygen"
+  },
+  "noSmoking": {
+    "panel": "overhead",
+    "type": "2sw",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "def": 0,
+    "label": "NO SMOKING",
+    "x": 480,
+    "y": 210,
+    "group": "Cabin"
+  },
+  "xpdr": {
+    "panel": "pedestal",
+    "type": "3sw",
+    "states": [
+      "STBY",
+      "ON",
+      "TA/RA"
+    ],
+    "def": 0,
+    "label": "XPDR",
+    "x": 290,
+    "y": 290,
+    "group": "Avionics"
+  }
+}

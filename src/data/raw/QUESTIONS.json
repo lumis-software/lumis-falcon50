@@ -1,0 +1,1806 @@
+[
+  {
+    "q": "Maximum certified passenger seats on the Falcon 50?",
+    "choices": [
+      "12",
+      "15",
+      "19",
+      "21"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum number of passengers for flight above 45,000 ft?",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Falcon 50 minimum flight crew?",
+    "choices": [
+      "One pilot",
+      "Two pilots (PIC + SIC)",
+      "Three pilots",
+      "Two pilots + Flight Engineer"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum Takeoff Weight without SB 161?",
+    "choices": [
+      "35,715 lbs",
+      "38,800 lbs",
+      "40,780 lbs",
+      "42,300 lbs"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum Landing Weight?",
+    "choices": [
+      "33,500 lbs",
+      "35,715 lbs",
+      "38,800 lbs",
+      "25,570 lbs"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum Zero Fuel Weight?",
+    "choices": [
+      "18,959 lbs",
+      "25,570 lbs",
+      "35,715 lbs",
+      "38,800 lbs"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Minimum flight weight?",
+    "choices": [
+      "16,200 lbs",
+      "18,959 lbs",
+      "21,400 lbs",
+      "25,570 lbs"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum baggage compartment weight?",
+    "choices": [
+      "1,500 lbs",
+      "2,205 lbs",
+      "2,800 lbs",
+      "3,200 lbs"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "VMO at sea level?",
+    "choices": [
+      "320 KIAS",
+      "350 KIAS",
+      "370 KIAS",
+      "390 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "VMO from 10,000 ft to 24,000 ft?",
+    "choices": [
+      "350 KIAS",
+      "370 KIAS",
+      "0.80 M",
+      "0.86 M"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "MMO above 24,000 ft?",
+    "choices": [
+      "0.78 M",
+      "0.80 M",
+      "0.82 M",
+      "0.86 M"
+    ],
+    "a": 3,
+    "cat": "Limitations"
+  },
+  {
+    "q": "VLO (gear operating speed)?",
+    "choices": [
+      "175 KIAS",
+      "190 KIAS",
+      "210 KIAS",
+      "220 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "VLE (gear extended speed)?",
+    "choices": [
+      "190 KIAS",
+      "200 KIAS",
+      "220 KIAS",
+      "230 KIAS"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "VA (Maneuvering Speed)?",
+    "choices": [
+      "190 KIAS",
+      "200 KIAS",
+      "210 KIAS",
+      "230 KIAS"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "VMCA (minimum control speed, air)?",
+    "choices": [
+      "75 KIAS",
+      "82.5 KIAS",
+      "92 KIAS",
+      "100 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum speed with cracked windshield?",
+    "choices": [
+      "180 KIAS",
+      "200 KIAS",
+      "230 KIAS",
+      "260 KIAS"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Turbulent air penetration speed?",
+    "choices": [
+      "230 KIAS / 0.70 M",
+      "250 KIAS / 0.72 M",
+      "280 KIAS / 0.76 M",
+      "300 KIAS / 0.80 M"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Max speed with one or both hydraulic systems inop?",
+    "choices": [
+      "220 KIAS / 0.70 M",
+      "240 KIAS / 0.72 M",
+      "260 KIAS / 0.76 M",
+      "280 KIAS / 0.78 M"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Windshield wiper maximum operating speed?",
+    "choices": [
+      "180 KIAS",
+      "190 KIAS",
+      "205 KIAS",
+      "230 KIAS"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "DV window maximum opening speed?",
+    "choices": [
+      "150 KIAS",
+      "180 KIAS",
+      "200 KIAS",
+      "230 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Tire ground speed limit?",
+    "choices": [
+      "165 kts",
+      "180 kts",
+      "195 kts",
+      "210 kts"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum speed with slats only extended?",
+    "choices": [
+      "175 KIAS",
+      "190 KIAS",
+      "200 KIAS",
+      "220 KIAS"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum speed with Slats + Flaps 20°?",
+    "choices": [
+      "175 KIAS",
+      "190 KIAS",
+      "200 KIAS",
+      "220 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum speed with Slats + Flaps 48°?",
+    "choices": [
+      "165 KIAS",
+      "175 KIAS",
+      "190 KIAS",
+      "200 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum altitude with slats or flaps extended?",
+    "choices": [
+      "15,000 ft",
+      "20,000 ft",
+      "25,000 ft",
+      "30,000 ft"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Max airspeed with AUTO SLAT light ON?",
+    "choices": [
+      "250 KIAS",
+      "270 KIAS",
+      "290 KIAS",
+      "300 KIAS"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum operating altitude without SB 163?",
+    "choices": [
+      "41,000 ft",
+      "43,000 ft",
+      "45,000 ft",
+      "49,000 ft"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum cabin differential pressure without SB 163?",
+    "choices": [
+      "8.6 psi",
+      "9.1 psi",
+      "9.5 psi",
+      "10.0 psi"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum altitude for standby pump operation?",
+    "choices": [
+      "35,000 ft",
+      "40,000 ft",
+      "45,000 ft",
+      "49,000 ft"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Falcon 50 engine model?",
+    "choices": [
+      "TFE 731-2",
+      "TFE 731-3-1C",
+      "TFE 731-5BR",
+      "PW305A"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Each engine takeoff thrust (uninstalled, SL, ISA)?",
+    "choices": [
+      "3,200 lbs",
+      "3,500 lbs",
+      "3,700 lbs",
+      "4,000 lbs"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Thrust setting parameter on TFE 731-3-1C?",
+    "choices": [
+      "N1",
+      "N2",
+      "ITT",
+      "Fuel Flow"
+    ],
+    "a": 0,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max N1 for takeoff and max continuous?",
+    "choices": [
+      "98.5%",
+      "100%",
+      "101.5%",
+      "103%"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max N2 for takeoff and max continuous?",
+    "choices": [
+      "96%",
+      "98%",
+      "100%",
+      "103%"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Transient N1 max for 1 minute?",
+    "choices": [
+      "101.5%",
+      "103%",
+      "105%",
+      "107%"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "5-second transient max N1?",
+    "choices": [
+      "103%",
+      "105%",
+      "107%",
+      "110%"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max ITT for normal start (3-1C)?",
+    "choices": [
+      "885°C",
+      "907°C",
+      "917°C",
+      "927°C"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max transient ITT during start, 10 seconds (3-1C)?",
+    "choices": [
+      "907°C",
+      "917°C",
+      "927°C",
+      "977°C"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max ITT during takeoff, normal (5 min max, 3-1C)?",
+    "choices": [
+      "885°C",
+      "907°C",
+      "917°C",
+      "927°C"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max continuous ITT?",
+    "choices": [
+      "870°C",
+      "885°C",
+      "907°C",
+      "920°C"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Minimum oil pressure for takeoff/continuous?",
+    "choices": [
+      "25 PSI",
+      "30 PSI",
+      "38 PSI",
+      "46 PSI"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Maximum oil pressure (takeoff, continuous, idle)?",
+    "choices": [
+      "38 PSI",
+      "46 PSI",
+      "55 PSI",
+      "60 PSI"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Minimum oil pressure at idle?",
+    "choices": [
+      "20 PSI",
+      "25 PSI",
+      "30 PSI",
+      "38 PSI"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max transient oil pressure (less than 3 min)?",
+    "choices": [
+      "46 PSI",
+      "50 PSI",
+      "55 PSI",
+      "60 PSI"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max oil temperature sea level to 30,000 ft?",
+    "choices": [
+      "110°C",
+      "120°C",
+      "127°C",
+      "140°C"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Max oil temperature above 30,000 ft?",
+    "choices": [
+      "127°C",
+      "140°C",
+      "149°C",
+      "160°C"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Minimum oil temperature for power above idle?",
+    "choices": [
+      "0°C",
+      "+10°C",
+      "+30°C",
+      "+50°C"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Maximum time from 10% N2 to light-off (ground start)?",
+    "choices": [
+      "5 sec",
+      "10 sec",
+      "15 sec",
+      "20 sec"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Maximum time from light-off to idle (ground start)?",
+    "choices": [
+      "30 sec",
+      "50 sec",
+      "60 sec",
+      "90 sec"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Engine Synchronizer permitted during which phases?",
+    "choices": [
+      "Takeoff",
+      "Landing",
+      "Cruise",
+      "Missed approach"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "APU is approved for use in which phases of flight?",
+    "choices": [
+      "Ground only",
+      "Ground and below 20,000 ft",
+      "All phases",
+      "Ground and emergency"
+    ],
+    "a": 0,
+    "cat": "APU"
+  },
+  {
+    "q": "APU maximum rated N1?",
+    "choices": [
+      "95%",
+      "100%",
+      "105%",
+      "110%"
+    ],
+    "a": 1,
+    "cat": "APU"
+  },
+  {
+    "q": "APU maximum allowable N1?",
+    "choices": [
+      "100%",
+      "105%",
+      "110%",
+      "115%"
+    ],
+    "a": 2,
+    "cat": "APU"
+  },
+  {
+    "q": "APU maximum rated ITT?",
+    "choices": [
+      "620°C",
+      "680°C",
+      "732°C",
+      "750°C"
+    ],
+    "a": 1,
+    "cat": "APU"
+  },
+  {
+    "q": "APU maximum allowable ITT?",
+    "choices": [
+      "680°C",
+      "710°C",
+      "732°C",
+      "760°C"
+    ],
+    "a": 2,
+    "cat": "APU"
+  },
+  {
+    "q": "APU bleed switch ON — what is prohibited?",
+    "choices": [
+      "Engine start",
+      "Engine or airframe anti-ice tests",
+      "Cabin pressurization",
+      "Radio operation"
+    ],
+    "a": 1,
+    "cat": "APU"
+  },
+  {
+    "q": "Maximum DC bus voltage?",
+    "choices": [
+      "28 VDC",
+      "30 VDC",
+      "32 VDC",
+      "36 VDC"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Max generator output up to 39,000 ft?",
+    "choices": [
+      "250 A",
+      "275 A",
+      "300 A",
+      "350 A"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Max generator output above 39,000 ft?",
+    "choices": [
+      "200 A",
+      "250 A",
+      "275 A",
+      "300 A"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  },
+  {
+    "q": "1-minute transient generator output max?",
+    "choices": [
+      "300 A",
+      "325 A",
+      "350 A",
+      "400 A"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Maximum inverter output?",
+    "choices": [
+      "500 VA",
+      "600 VA",
+      "750 VA",
+      "1,000 VA"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Battery temperature WARM amber light at or above?",
+    "choices": [
+      "100°F",
+      "120°F",
+      "140°F",
+      "150°F"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Battery temperature HOT red light at or above (w/o SB 295)?",
+    "choices": [
+      "120°F",
+      "140°F",
+      "150°F",
+      "160°F"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Maximum GPU start current and voltage?",
+    "choices": [
+      "800 A / 28 VDC",
+      "1,000 A / 28 VDC",
+      "1,200 A / 32 VDC",
+      "1,500 A / 28 VDC"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  },
+  {
+    "q": "How many engine-driven generators?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Main DC buses in the Falcon 50?",
+    "choices": [
+      "A and B",
+      "A, B, C",
+      "A, B, C, D",
+      "Essential & Non-Essential"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Total fuel capacity (without SB 496)?",
+    "choices": [
+      "13,420 lbs",
+      "14,580 lbs",
+      "15,514 lbs",
+      "16,200 lbs"
+    ],
+    "a": 2,
+    "cat": "Fuel"
+  },
+  {
+    "q": "Center system fuel capacity?",
+    "choices": [
+      "4,800 lbs",
+      "5,124 lbs",
+      "5,152 lbs",
+      "5,210 lbs"
+    ],
+    "a": 3,
+    "cat": "Fuel"
+  },
+  {
+    "q": "Maximum fuel imbalance for flight?",
+    "choices": [
+      "200 lbs",
+      "500 lbs",
+      "1,000 lbs",
+      "None"
+    ],
+    "a": 3,
+    "cat": "Fuel"
+  },
+  {
+    "q": "Maximum pressure fueling pressure?",
+    "choices": [
+      "35 PSI",
+      "45 PSI",
+      "50 PSI",
+      "65 PSI"
+    ],
+    "a": 2,
+    "cat": "Fuel"
+  },
+  {
+    "q": "How many independent fuel systems?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 2,
+    "cat": "Fuel"
+  },
+  {
+    "q": "Thrust reverser is approved for?",
+    "choices": [
+      "Ground use only",
+      "Ground and emergency descent",
+      "Ground & in-flight descent",
+      "All phases"
+    ],
+    "a": 0,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "Max N1 during thrust reverse use?",
+    "choices": [
+      "85%",
+      "90%",
+      "93%",
+      "98%"
+    ],
+    "a": 2,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "Thrust reverser inadvertently deployed in-flight, max airspeed?",
+    "choices": [
+      "200 KIAS",
+      "220 KIAS",
+      "230 KIAS",
+      "250 KIAS"
+    ],
+    "a": 2,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "Recommended max continuous thrust reverse usage?",
+    "choices": [
+      "15 sec",
+      "30 sec",
+      "60 sec",
+      "2 min"
+    ],
+    "a": 1,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "Time recommended between consecutive thrust reverser uses?",
+    "choices": [
+      "1 min",
+      "2.5 min",
+      "4.5 min",
+      "10 min"
+    ],
+    "a": 2,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "Can a go-around be attempted after thrust reverse is selected?",
+    "choices": [
+      "Yes — at pilot discretion",
+      "Yes, only above 50 ft AGL",
+      "No — prohibited",
+      "Only if both reversers inop"
+    ],
+    "a": 2,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "Minimum engaged altitude for autopilot enroute?",
+    "choices": [
+      "500 ft",
+      "800 ft",
+      "1,000 ft",
+      "1,500 ft"
+    ],
+    "a": 2,
+    "cat": "Avionics"
+  },
+  {
+    "q": "Minimum A/P altitude on approach, RA operative?",
+    "choices": [
+      "50 ft",
+      "100 ft",
+      "200 ft",
+      "500 ft"
+    ],
+    "a": 0,
+    "cat": "Avionics"
+  },
+  {
+    "q": "Minimum A/P altitude on approach, RA inoperative?",
+    "choices": [
+      "50 ft",
+      "100 ft",
+      "200 ft",
+      "500 ft"
+    ],
+    "a": 1,
+    "cat": "Avionics"
+  },
+  {
+    "q": "If Mach Trim inop and A/P not engaged, max airspeed?",
+    "choices": [
+      "0.74 M",
+      "0.76 M",
+      "0.78 M",
+      "0.80 M"
+    ],
+    "a": 2,
+    "cat": "Avionics"
+  },
+  {
+    "q": "Yaw damper status required for takeoff?",
+    "choices": [
+      "Engaged",
+      "Centered (not offset)",
+      "OFF",
+      "Test position"
+    ],
+    "a": 1,
+    "cat": "Avionics"
+  },
+  {
+    "q": "Icing conditions exist on the ground when OAT is less than ___ with visible moisture?",
+    "choices": [
+      "5°C",
+      "8°C",
+      "10°C",
+      "15°C"
+    ],
+    "a": 2,
+    "cat": "Anti-Ice"
+  },
+  {
+    "q": "Icing conditions exist in-flight when TAT is?",
+    "choices": [
+      "5°C",
+      "8°C",
+      "10°C",
+      "15°C"
+    ],
+    "a": 2,
+    "cat": "Anti-Ice"
+  },
+  {
+    "q": "Engine and Wing Anti-Ice must NOT be used with OAT above?",
+    "choices": [
+      "5°C",
+      "10°C",
+      "15°C",
+      "20°C"
+    ],
+    "a": 1,
+    "cat": "Anti-Ice"
+  },
+  {
+    "q": "Wing Anti-Ice ground use is allowed for?",
+    "choices": [
+      "Anytime below 10°C",
+      "Testing only, short duration",
+      "Departure with ice on wing",
+      "Never"
+    ],
+    "a": 1,
+    "cat": "Anti-Ice"
+  },
+  {
+    "q": "Landing light duty cycle?",
+    "choices": [
+      "10 min ON / 30 min OFF",
+      "15 min ON / 45 min OFF",
+      "30 min ON / 60 min OFF",
+      "No limit"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Taxi light operation after gear retraction?",
+    "choices": [
+      "ON",
+      "Either",
+      "OFF",
+      "AUTO"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maneuvering load factor limits flaps up?",
+    "choices": [
+      "+2.0 / 0 g",
+      "+2.5 / -1.0 g",
+      "+2.6 / -1.0 g",
+      "+3.0 / -1.5 g"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maneuvering load factor limits flaps down?",
+    "choices": [
+      "+2.0 / 0 g",
+      "+2.5 / -1.0 g",
+      "+2.6 / -1.0 g",
+      "+3.0 / -1.5 g"
+    ],
+    "a": 0,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Tail wind component limit?",
+    "choices": [
+      "5 kts",
+      "10 kts",
+      "15 kts",
+      "20 kts"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Demonstrated crosswind component?",
+    "choices": [
+      "15 kts",
+      "20 kts",
+      "23 kts",
+      "30 kts"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Normal RTO kinetic energy limit?",
+    "choices": [
+      "12,000 KJ",
+      "14,697 KJ",
+      "16,500 KJ",
+      "18,249 KJ"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Maximum RTO kinetic energy limit?",
+    "choices": [
+      "14,697 KJ",
+      "16,000 KJ",
+      "18,249 KJ",
+      "20,000 KJ"
+    ],
+    "a": 2,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Anti-skid dispatch requirement?",
+    "choices": [
+      "May be inop",
+      "Must be operative",
+      "Only one channel required",
+      "Test-only requirement"
+    ],
+    "a": 1,
+    "cat": "Limitations"
+  },
+  {
+    "q": "Engine Fire In Flight — first immediate action?",
+    "choices": [
+      "Pull FIRE handle",
+      "Silence warning horn",
+      "Power lever CUT-OFF",
+      "Discharge bottle 1"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Engine Fire In Flight — what speed should you remain below?",
+    "choices": [
+      "200 KIAS",
+      "230 KIAS",
+      "250 KIAS",
+      "280 KIAS"
+    ],
+    "a": 2,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "All Engines Out — first action?",
+    "choices": [
+      "Battery load to 50 A",
+      "C and D Buses OFF",
+      "STBY Pump ON",
+      "Emergency slats"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "All Engines Out — battery load reduced to?",
+    "choices": [
+      "20 A per battery",
+      "30 A per battery",
+      "50 A per battery",
+      "75 A per battery"
+    ],
+    "a": 2,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Tail pipe fire — start pushbutton held depressed for?",
+    "choices": [
+      "5 seconds",
+      "10 seconds",
+      "15 seconds",
+      "30 seconds"
+    ],
+    "a": 2,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "APU Fire — second step after silencing warning?",
+    "choices": [
+      "APU MASTER depressed",
+      "APU GEN off",
+      "FIRE APU position 1",
+      "ENG 2 fire pull"
+    ],
+    "a": 0,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Three Generators Inop — BUS TIE switch position?",
+    "choices": [
+      "TIED",
+      "FLIGHT NORMAL",
+      "EMER",
+      "ISO"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Three Generators Inop — max generator resets each?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "Unlimited"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Inadvertent in-flight thrust reversal — first action?",
+    "choices": [
+      "FIRE PULL ENG 2",
+      "ENG 2 to IDLE",
+      "Aircraft pitch up",
+      "Reduce to 230 KIAS"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Engine Failure Before V1 — airbrake handle position?",
+    "choices": [
+      "Position 1",
+      "Position 2",
+      "Position 3",
+      "Stowed"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Engine Failure After V1 — gear retraction trigger?",
+    "choices": [
+      "Above 100 ft AGL",
+      "Positive rate of climb",
+      "V2+15",
+      "Clean wing"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "After Engine Failure: at V2+15, configure to?",
+    "choices": [
+      "Clean wing",
+      "Slats only",
+      "Slats + Flaps 20°",
+      "Maintain config"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Smoke Removal — descend below what altitude before dumping cabin?",
+    "choices": [
+      "8,000 ft",
+      "10,000 ft",
+      "12,000 ft",
+      "14,000 ft"
+    ],
+    "a": 2,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "Smoke Removal — LH DV window opened at what speed limit?",
+    "choices": [
+      "150 KIAS",
+      "180 KIAS",
+      "200 KIAS",
+      "230 KIAS"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "High Cabin Alt — what oxygen mask setting?",
+    "choices": [
+      "100% only",
+      "Normal",
+      "Emergency",
+      "Off"
+    ],
+    "a": 1,
+    "cat": "Memory Items"
+  },
+  {
+    "q": "How many hydraulic systems on the Falcon 50?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 2,
+    "cat": "Systems"
+  },
+  {
+    "q": "Hydraulic fluid specification?",
+    "choices": [
+      "MIL-H-5606",
+      "Skydrol LD-4",
+      "MIL-PRF-83282",
+      "Type IV"
+    ],
+    "a": 0,
+    "cat": "Systems"
+  },
+  {
+    "q": "Which engine drives the #3 hydraulic system?",
+    "choices": [
+      "ENG 1",
+      "ENG 2",
+      "ENG 3",
+      "APU"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "If Hyd Sys 1 is lost, what backup powers emergency slats?",
+    "choices": [
+      "Engine 2 pump",
+      "STBY pump",
+      "Accumulator",
+      "Manual handle"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "If ENG 1 and ENG 2 fail, which hydraulic system is lost?",
+    "choices": [
+      "None",
+      "Sys 1",
+      "Sys 2",
+      "Sys 3"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Wing tank fuel feeds which engine in normal ops?",
+    "choices": [
+      "Center to all",
+      "Same-side wing feeds same-side engine",
+      "Cross-feed continuous",
+      "Random rotation"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Number of static inverters?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "EFIS installed in standard Falcon 50?",
+    "choices": [
+      "Honeywell Primus 1000",
+      "Collins EFIS 86C14",
+      "Garmin G5000",
+      "Sperry SPZ-8000"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Autopilot system on Falcon 50?",
+    "choices": [
+      "KFC 325",
+      "APS 80 or APS 85",
+      "Honeywell SPZ-200",
+      "Collins FCS-105"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Bleed air valves controlled by which cockpit switches?",
+    "choices": [
+      "CABIN, CREW, PRV",
+      "L, R, C",
+      "ECU, ACU, PAC",
+      "ISO, MAN, AUTO"
+    ],
+    "a": 0,
+    "cat": "Systems"
+  },
+  {
+    "q": "Which engine inlet has an inlet door subject to opening malfunction?",
+    "choices": [
+      "ENG 1",
+      "ENG 2",
+      "ENG 3",
+      "All three"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Slat/flap positions available?",
+    "choices": [
+      "Up, Half, Full",
+      "Slats, S+20°, S+48°",
+      "0°, 20°, 30°, 48°",
+      "Manual only"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Auto-slat function purpose?",
+    "choices": [
+      "Auto retract on overspeed",
+      "Auto extend at high AoA",
+      "Auto trim",
+      "Mach trim"
+    ],
+    "a": 1,
+    "cat": "Systems"
+  },
+  {
+    "q": "Forced landing approach: target vertical speed just before touchdown?",
+    "choices": [
+      "100 fpm",
+      "300 fpm",
+      "500 fpm",
+      "800 fpm"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Ditching: target nose-up attitude before water contact?",
+    "choices": [
+      "5°",
+      "7°",
+      "11–13°",
+      "20°"
+    ],
+    "a": 2,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Ditching: configuration of landing gear?",
+    "choices": [
+      "Extended",
+      "Retracted",
+      "Half extended",
+      "Pilot discretion"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Forced landing: configuration of landing gear?",
+    "choices": [
+      "Retracted",
+      "Extended",
+      "Half extended",
+      "Per terrain"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Ditching: which cabin door must not be opened?",
+    "choices": [
+      "Emergency exits",
+      "Cabin access door",
+      "Service door",
+      "Both LH and RH overwing"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Engine airstart — max number of consecutive attempts?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "Unlimited"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Airstart — minimum time between consecutive attempts?",
+    "choices": [
+      "5 seconds",
+      "10 seconds",
+      "30 seconds",
+      "60 seconds"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Engine Failure In Flight — IDLE for how long before CUT-OFF?",
+    "choices": [
+      "10 seconds",
+      "30 seconds",
+      "1 minute if possible",
+      "5 minutes"
+    ],
+    "a": 2,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Engine Fire In Flight Phase 1 — first fire bottle selection?",
+    "choices": [
+      "Position 1",
+      "Position 2",
+      "Both simultaneously",
+      "Wait 30 seconds"
+    ],
+    "a": 0,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Approach & Landing One Engine Inop S+Flaps 48° — approach airspeed?",
+    "choices": [
+      "VREF",
+      "VREF + 5 KTS MIN",
+      "VREF + 10 KTS",
+      "V2 + 25"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Smoke Removal — at 12,000 ft or below, cabin pressure switch?",
+    "choices": [
+      "AUTO",
+      "MAN",
+      "DUMP",
+      "EMER"
+    ],
+    "a": 2,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Engine Failure After V1 — at 400 ft AGL min, V2+25 means?",
+    "choices": [
+      "Slats only",
+      "Clean wing",
+      "Flaps 20°",
+      "Maintain flaps 48°"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Three Generators Inop — typical battery duration at ~50 A load?",
+    "choices": [
+      "10 minutes",
+      "20 minutes",
+      "45 minutes",
+      "1 hour"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "If unable to relight engine, fire pull handle action?",
+    "choices": [
+      "Leave stowed",
+      "Pull",
+      "Pull only if fire light",
+      "ATC discretion"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Bleed OVHT light — first action?",
+    "choices": [
+      "PRV OFF",
+      "PRV ON",
+      "ENG 2 IDLE",
+      "Land ASAP"
+    ],
+    "a": 0,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Forced Landing — at touchdown, GEN and BAT switches?",
+    "choices": [
+      "ON",
+      "OFF (all 5)",
+      "Only batteries OFF",
+      "Only gens OFF"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "TFE 731-3-1C engine has what level of electronic control?",
+    "choices": [
+      "Full FADEC",
+      "DEEC/DEECS",
+      "Hydromechanical only — no FADEC",
+      "Single-channel digital"
+    ],
+    "a": 2,
+    "cat": "Engine"
+  },
+  {
+    "q": "Per Eric Parks / airplanedriver.net, HP-1 and HP-3 bleed are dedicated to?",
+    "choices": [
+      "S-duct anti-ice",
+      "Wing anti-ice",
+      "Tank pressurization",
+      "CABIN ECU"
+    ],
+    "a": 1,
+    "cat": "Bleed Air"
+  },
+  {
+    "q": "HP-2 bleed air in AUTO is routed to?",
+    "choices": [
+      "Wing anti-ice",
+      "S-duct anti-ice (ENG 2 inlet)",
+      "Brake accumulator",
+      "APU bleed"
+    ],
+    "a": 1,
+    "cat": "Bleed Air"
+  },
+  {
+    "q": "Per the POH, Hyd System 3 is driven by which engine?",
+    "choices": [
+      "ENG 1",
+      "ENG 2",
+      "ENG 3",
+      "APU"
+    ],
+    "a": 1,
+    "cat": "Hydraulics"
+  },
+  {
+    "q": "Which DC bus powers the antiskid system?",
+    "choices": [
+      "A bus",
+      "B bus",
+      "C bus",
+      "D bus"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Which generators feed the LEFT MAIN DC bus?",
+    "choices": [
+      "GEN 1 only",
+      "GEN 1 and GEN 2",
+      "GEN 2 and GEN 3",
+      "All three"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Which generator feeds the RIGHT MAIN DC bus in flight?",
+    "choices": [
+      "GEN 1",
+      "GEN 2",
+      "GEN 3",
+      "APU GEN"
+    ],
+    "a": 2,
+    "cat": "Electrical"
+  },
+  {
+    "q": "Following GEN 3 failure, the correct BUS TIE selection is?",
+    "choices": [
+      "FLIGHT NORMAL",
+      "TIED",
+      "OFF",
+      "ISO"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  },
+  {
+    "q": "STBY hydraulic pump is powered from which bus?",
+    "choices": [
+      "Battery direct",
+      "Left Main DC",
+      "Right Main DC",
+      "AC Bus 1"
+    ],
+    "a": 1,
+    "cat": "Hydraulics"
+  },
+  {
+    "q": "Mach trim system shares its motor with what?",
+    "choices": [
+      "Yaw damper",
+      "Primary pitch trim",
+      "Aileron trim",
+      "Rudder trim"
+    ],
+    "a": 1,
+    "cat": "Flight Controls"
+  },
+  {
+    "q": "Mach trim operates between?",
+    "choices": [
+      "0.60 and 0.78 M",
+      "0.70 and 0.85 M",
+      "0.78 and 0.89 M",
+      "0.80 and 0.86 M"
+    ],
+    "a": 2,
+    "cat": "Flight Controls"
+  },
+  {
+    "q": "Auto-slat extension is triggered by?",
+    "choices": [
+      "Airspeed below stick-shaker",
+      "High angle of attack (alpha)",
+      "Pilot switch",
+      "Flap lever movement"
+    ],
+    "a": 1,
+    "cat": "Flight Controls"
+  },
+  {
+    "q": "Per Eric Parks: flap asymmetry trip at flaps 20° occurs at what split?",
+    "choices": [
+      "3°",
+      "5°",
+      "8°",
+      "12°"
+    ],
+    "a": 1,
+    "cat": "Flight Controls"
+  },
+  {
+    "q": "Per Eric Parks: flap asymmetry trip at flaps 48° occurs at what split?",
+    "choices": [
+      "3°",
+      "5°",
+      "8°",
+      "12°"
+    ],
+    "a": 2,
+    "cat": "Flight Controls"
+  },
+  {
+    "q": "What 'feel' system provides artificial elevator force?",
+    "choices": [
+      "Q-spring",
+      "Arthur Q (dynamic-pressure-driven)",
+      "Bobweight only",
+      "Hydraulic actuator force feedback"
+    ],
+    "a": 1,
+    "cat": "Flight Controls"
+  },
+  {
+    "q": "Center tank gravity-feed to feeders 1 and 2 begins when feeders drop below approximately?",
+    "choices": [
+      "200 lb",
+      "400 lb",
+      "600 lb",
+      "1,000 lb"
+    ],
+    "a": 2,
+    "cat": "Fuel"
+  },
+  {
+    "q": "Primary tool to manage fuel imbalance is?",
+    "choices": [
+      "Crossfeed",
+      "Turn off XFR pump on heavy side",
+      "Burn from center first",
+      "Boost pump off on light side"
+    ],
+    "a": 1,
+    "cat": "Fuel"
+  },
+  {
+    "q": "The N114TD accident (Greenville 2018) highlighted what failure mode?",
+    "choices": [
+      "Engine failure on takeoff",
+      "Antiskid failure with EMER BRAKE not selected",
+      "Pressurization runaway",
+      "Fuel exhaustion"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "Per the N114TD lesson — first response to antiskid failure on rollout?",
+    "choices": [
+      "Stand on the brakes",
+      "Select EMER BRAKE (Sys 2) and modulate manually",
+      "Reverse to maximum and hold",
+      "Parking brake"
+    ],
+    "a": 1,
+    "cat": "Procedures"
+  },
+  {
+    "q": "APU model on the Falcon 50?",
+    "choices": [
+      "GTCP36-100",
+      "GTCP85",
+      "APS500",
+      "RE220"
+    ],
+    "a": 0,
+    "cat": "APU"
+  },
+  {
+    "q": "Falcon 50's Collins autopilot model (modernized fleet)?",
+    "choices": [
+      "APS-65",
+      "APS-80 / APS-85",
+      "FCS-105",
+      "SPZ-200"
+    ],
+    "a": 1,
+    "cat": "Avionics"
+  },
+  {
+    "q": "Engine sync master engine on the Falcon 50?",
+    "choices": [
+      "ENG 1",
+      "ENG 2",
+      "ENG 3",
+      "Pilot selectable"
+    ],
+    "a": 1,
+    "cat": "Engine"
+  },
+  {
+    "q": "Thrust reverser is fitted to which engine(s)?",
+    "choices": [
+      "ENG 1 only",
+      "ENG 2 only (center)",
+      "ENG 1 and ENG 3",
+      "All three"
+    ],
+    "a": 1,
+    "cat": "Thrust Reverser"
+  },
+  {
+    "q": "If both ENG 1 and ENG 2 fail (per POH), which hydraulic system is lost?",
+    "choices": [
+      "Sys 1",
+      "Sys 2",
+      "Sys 3",
+      "All three"
+    ],
+    "a": 0,
+    "cat": "Hydraulics"
+  },
+  {
+    "q": "Loss of Right Main DC also loses what critical brake-related function?",
+    "choices": [
+      "Nose wheel steering",
+      "Antiskid (B-bus)",
+      "Parking brake",
+      "Brake accumulator"
+    ],
+    "a": 1,
+    "cat": "Electrical"
+  }
+]

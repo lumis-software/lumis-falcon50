@@ -1,0 +1,384 @@
+[
+  {
+    "type": "Emergency",
+    "title": "Engine Failure During Takeoff — Before V1",
+    "id": "E-9",
+    "steps": [
+      "Brakes — MAXIMUM PRESSURE",
+      "Power Levers — IDLE",
+      "Airbrake Handle — POSITION 2",
+      "Thrust Reverser — DEPLOYED",
+      "ATC — ADVISE INTENTIONS"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Engine Failure During Takeoff — After V1",
+    "id": "E-9",
+    "steps": [
+      "At VR — ROTATE",
+      "Takeoff Attitude — SET",
+      "Maintain V2 minimum",
+      "Gear UP when positive rate",
+      "V2+15 → SLATS ONLY; V2+25 → CLEAN WING",
+      "Enroute climb: 1.5 VS"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Engine Failure (Shutdown) In Flight",
+    "id": "E-10",
+    "steps": [
+      "Determine which engine has failed",
+      "Power Lever — IDLE 1 min",
+      "Power Lever — CUTOFF",
+      "Fuel Boost Pump — OFF",
+      "GEN Switch — OFF",
+      "Engine Anti-Ice — As required",
+      "HP Switch (& PRV if ENG 2) — OFF",
+      "Electrical Load — REDUCE",
+      "STBY PUMP — ON as required",
+      "If no restart: FIRE PULL — PULL"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Engine Fire In Flight",
+    "id": "E-23",
+    "steps": [
+      "Warning Horn — SILENCE",
+      "Power Lever — CUT-OFF",
+      "FIRE PULL — PULLED",
+      "Airspeed — Below 250 KIAS",
+      "Fire Ext ENG — POSITION 1",
+      "If persists — POSITION 2",
+      "Shut down affected engine",
+      "LAND AS SOON AS POSSIBLE"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Engine Fire On Ground",
+    "id": "E-23",
+    "steps": [
+      "Power Lever — IDLE",
+      "Aircraft — STOP",
+      "Parking Brake — First Detent",
+      "Power Lever — CUT-OFF",
+      "FIRE PULL — PULLED",
+      "Fire Ext — POSITION 1 then 2",
+      "EMERGENCY EVACUATION"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "APU Fire",
+    "id": "E-24",
+    "steps": [
+      "Warning Horn — SILENCE",
+      "APU MASTER — DEPRESSED",
+      "FIRE APU — POSITION 1",
+      "APU BLEED — OFF",
+      "APU GEN — OFF",
+      "If persists: ENG 2 FIRE PULL — PULL & shut down ENG 2",
+      "Evacuate if necessary"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Tail Pipe Fire",
+    "id": "E-24",
+    "steps": [
+      "Power Lever — CUT-OFF",
+      "Start Selector — MOTOR START STOP",
+      "Start Pushbutton — Held 15 seconds"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "All Engines Out",
+    "id": "E-5",
+    "steps": [
+      "C and D Buses — OFF",
+      "Communications — VHF/ATC 1",
+      "Establish within airstart envelope",
+      "Battery Load — 50 A/battery",
+      "Airstarts — Attempt",
+      "If no relight: Forced Landing/Ditching prep",
+      "STBY Pump ON; Emergency Slats EXTEND (200 kts)",
+      "Gear DOWN at VLO=190 if forced landing"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Forced Landing",
+    "id": "E-6",
+    "steps": [
+      "MAYDAY transmission + transponder",
+      "Passengers instructed; belts/no smoking ON",
+      "Airframe Anti-Ice — OFF",
+      "CREW/CABIN/HP Bleed — OFF",
+      "Cabin Pressure — DUMP",
+      "Gear EXTENDED; Slats + Flaps 48°",
+      "Approach speed — VREF; VS ≈ 300 fpm",
+      "All GEN/BAT switches — OFF",
+      "Power Levers — CUT-OFF",
+      "After stop: Fire pulls + extinguishers, evacuate"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Ditching",
+    "id": "E-7",
+    "steps": [
+      "MAYDAY + transponder",
+      "Life jackets DONNED",
+      "AUDIO WARN CBs — PULLED",
+      "All bleeds OFF; ECU Inlet door PULL",
+      "Cabin Pressure — DUMP; Gear RETRACTED",
+      "Slats + Flaps 48° — EXTENDED",
+      "VREF approach, 300 fpm, 11-13° nose-up, into swell crest",
+      "All GEN/BAT — OFF before touchdown",
+      "Use emergency exits — cabin access door NOT opened"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Flame Out / High-Speed Airstart",
+    "id": "E-11",
+    "steps": [
+      "N2 ≥ 15%: Power Lever — IDLE immediately",
+      "Start Selector — AIR START; IGN light ON",
+      "ITT — Rise within 10 sec",
+      "Power Lever — ADVANCE",
+      "After relight: Start Selector — GND START, IGN out"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Airstart — Computer Normal Mode",
+    "id": "E-12",
+    "steps": [
+      "Establish within airstart envelope",
+      "Power Lever — CUTOFF",
+      "GEN/COMP/BOOSTER — ON",
+      "Anti-Ice — As required",
+      "MAIN BUS TIE — TIED",
+      "Start Selector AIR START; Start PB <2 sec when N2 not >15%",
+      "At N2 12-15% and N1 rotation: Power Lever IDLE",
+      "ITT rises 10 sec; N2 >50% → GND START"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Loss of Both Hydraulic Systems",
+    "id": "E-58",
+    "steps": [
+      "Max speed 260 KIAS / 0.76 M",
+      "Emergency slats; manual gear extension",
+      "#1 HYD lost → #2 OFF for emergency brakes",
+      "Consider time for gear extension ≈ 2 min",
+      "Approach: SLATS; landing config based on hyd lost"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Three Generators Inop",
+    "id": "E-41",
+    "steps": [
+      "C and D Buses — OFF",
+      "BUS TIE — FLIGHT NORMAL",
+      "Each Generator — No more than 2 resets",
+      "Reduce load (BOOST/XFR/Wsh/A/I/Lights OFF)",
+      "Avoid icing",
+      "LAND AS SOON AS POSSIBLE"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Two Generators Inop",
+    "id": "E-42",
+    "steps": [
+      "BUS TIE — TIED",
+      "Reduce non-essential loads",
+      "Consider Land as soon as practical"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Battery Overheat",
+    "id": "E-44",
+    "steps": [
+      "BAT switch (overheating battery) — OFF",
+      "Monitor temperature; if continues — LAND ASAP"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Cabin Pressure Too High",
+    "id": "E-32",
+    "steps": [
+      "Cabin Pressurization Controller — Select higher altitude",
+      "UP–DN — 1 to 2 o'clock; Selector — MAN",
+      "If still increasing: CREW & CABIN bleed — OFF"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Air Conditioning Smoke",
+    "id": "E-30",
+    "steps": [
+      "Crew O2 Masks — 100% + EMERGENCY",
+      "Smoke Goggles — DONNED",
+      "Mic Selector — MASK & C'PIT",
+      "No Smoking — ON",
+      "PAX O2 — OVERRIDE, masks donned",
+      "Bleed Air ISO — ISOLATION; CREW OFF; PRV OFF",
+      "Temp — MANUAL/COLD",
+      "If persists: Smoke Removal procedure"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Smoke Removal",
+    "id": "E-31",
+    "steps": [
+      "Crew O2 100% + EMER; goggles",
+      "No Smoking ON",
+      "Crew Air Gaspers — OPEN",
+      "Temp — MANUAL/COLD",
+      "Descend below 12,000 ft",
+      "At ≤12,000 ft: Cabin Pressure — DUMP",
+      "Below 180 KIAS: LH DV Window — OPEN",
+      "If persists: LAND ASAP"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Inadvertent Flight Thrust Reversal",
+    "id": "E-25",
+    "steps": [
+      "ENG 2 — IDLE",
+      "T/R NORM/STOW — STOW",
+      "Reduce airspeed — 230 KIAS",
+      "If stowed: Continue",
+      "If remains deployed: LAND ASAP with one-engine-inop procedure"
+    ]
+  },
+  {
+    "type": "Emergency",
+    "title": "Unreliable Airspeeds at High Altitude",
+    "id": "E-79",
+    "steps": [
+      "Disengage A/P, A/T",
+      "Pitch/Power for level flight",
+      "Cross-check stby instruments",
+      "Refer to QRH attitude+thrust table",
+      "Consider blocked pitot procedures"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Preflight",
+    "id": "P-1",
+    "steps": [
+      "External walk-around per checklist",
+      "Cockpit safety checks (BAT, fire warning test)",
+      "Battery on, fuel quantity check",
+      "Set up navigation, flight plan, performance"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Before Engine Start",
+    "id": "N-1",
+    "steps": [
+      "Parking brake — SET",
+      "BAT switches — ON",
+      "External power as available",
+      "Beacon — ON",
+      "Fuel boost pumps — ON",
+      "Hydraulics — CHECK"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Engine Start",
+    "id": "N-3",
+    "steps": [
+      "Start sequence: ENG 2 typically first (APU bleed)",
+      "Start Selector — GND START",
+      "Start pushbutton — DEPRESS",
+      "At ~20% N2 — Power Lever IDLE",
+      "Monitor ITT < 907°C",
+      "Verify oil pressure rise within 10 sec"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Before Taxi",
+    "id": "N-5",
+    "steps": [
+      "Flight controls — FREE & CORRECT",
+      "Trims — SET T/O",
+      "Slats/Flaps — SLATS or S+20°",
+      "Anti-ice — AS REQUIRED",
+      "Yaw damper — CENTERED for T/O"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Before Takeoff",
+    "id": "N-7",
+    "steps": [
+      "TOLD card/bugs — SET",
+      "Pitot heat — ON",
+      "Transponder — ON",
+      "Landing lights — ON",
+      "Brakes — release for line-up"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "After Takeoff / Climb",
+    "id": "N-9",
+    "steps": [
+      "Gear UP at positive rate",
+      "Slats/flaps retract per schedule",
+      "Yaw damper ON",
+      "Climb power, climb speed"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Cruise",
+    "id": "N-11",
+    "steps": [
+      "Cruise N1 set",
+      "Autopilot engaged (>1,000 ft enroute)",
+      "Monitor fuel balance"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Descent / Approach",
+    "id": "N-13",
+    "steps": [
+      "Descent planning, fuel check",
+      "Anti-ice as required",
+      "Approach briefing",
+      "Landing data computed"
+    ]
+  },
+  {
+    "type": "Normal",
+    "title": "Landing",
+    "id": "N-15",
+    "steps": [
+      "Slats+Flaps 48° (or 20° performance limited)",
+      "VREF on approach",
+      "A/P OFF by minimum altitude",
+      "Smooth flare; spoilers deploy; reverse on touchdown"
+    ]
+  }
+]

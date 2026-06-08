@@ -2,3 +2,12 @@
 *.zip
 node_modules/
 .netlify/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+!.env.example
+.vercel
+coverage/
+*.tsbuildinfo

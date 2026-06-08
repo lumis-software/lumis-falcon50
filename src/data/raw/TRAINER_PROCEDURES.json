@@ -1,0 +1,827 @@
+[
+  {
+    "id": "preflight",
+    "category": "Normal",
+    "name": "Pre-Flight Setup",
+    "desc": "Cold and dark to ready for engine start. Battery on, fire test, fuel check, FMS setup.",
+    "steps": [
+      {
+        "ctrl": "bat1",
+        "target": "ON",
+        "action": "Battery 1 — ON",
+        "note": "Powers L Main DC bus via battery feed"
+      },
+      {
+        "ctrl": "bat2",
+        "target": "ON",
+        "action": "Battery 2 — ON",
+        "note": "Powers R Main DC bus"
+      },
+      {
+        "ctrl": "navLt",
+        "target": "ON",
+        "action": "NAV lights — ON",
+        "note": "Position lights (red left, green right, white tail)"
+      },
+      {
+        "ctrl": "parkBrk",
+        "target": "SET",
+        "action": "Parking Brake — SET",
+        "note": "Sys 2 accumulator pressure required"
+      },
+      {
+        "ctrl": "boost1",
+        "target": "ON",
+        "action": "BOOST 1 — ON",
+        "note": "Required before engine start"
+      },
+      {
+        "ctrl": "boost2",
+        "target": "ON",
+        "action": "BOOST 2 — ON"
+      },
+      {
+        "ctrl": "boost3",
+        "target": "ON",
+        "action": "BOOST 3 — ON"
+      }
+    ]
+  },
+  {
+    "id": "before_start",
+    "category": "Normal",
+    "name": "APU Start + Before Engine Start",
+    "desc": "APU to RUN for bleed and ground power. Beacon on, clearance set, ready for engine start.",
+    "steps": [
+      {
+        "ctrl": "apuMaster",
+        "target": "START",
+        "action": "APU MASTER — START",
+        "note": "APU spins up, ITT rises"
+      },
+      {
+        "ctrl": "apuMaster",
+        "target": "RUN",
+        "action": "APU MASTER — RUN",
+        "note": "After APU stabilizes at 100% N1"
+      },
+      {
+        "ctrl": "apuGen",
+        "target": "ON",
+        "action": "APU GEN — ON",
+        "note": "Powers both Main DC buses (300A)"
+      },
+      {
+        "ctrl": "apuBleed",
+        "target": "ON",
+        "action": "APU BLEED — ON",
+        "note": "Provides bleed air for engine start"
+      },
+      {
+        "ctrl": "beacon",
+        "target": "ON",
+        "action": "BEACON — ON",
+        "note": "Required before engine start"
+      }
+    ]
+  },
+  {
+    "id": "engine_start",
+    "category": "Normal",
+    "name": "Engine Start (ENG 2 first)",
+    "desc": "Start sequence: ENG 2 (S-duct) first using APU bleed, then ENG 1, then ENG 3. Monitor ITT.",
+    "steps": [
+      {
+        "ctrl": "start2",
+        "target": "GND START",
+        "action": "Start Selector 2 — GND START"
+      },
+      {
+        "ctrl": "startPB2",
+        "target": "PRESS",
+        "action": "Start Pushbutton 2 — PRESS (<2 sec)",
+        "note": "ITT must rise within 10 sec"
+      },
+      {
+        "ctrl": "power2",
+        "target": "IDLE",
+        "action": "ENG 2 Power Lever — IDLE",
+        "note": "When N2 reaches ~20% and N1 turning"
+      },
+      {
+        "ctrl": "gen2",
+        "target": "ON",
+        "action": "GEN 2 — ON",
+        "note": "After N2 stabilizes"
+      },
+      {
+        "ctrl": "start1",
+        "target": "GND START",
+        "action": "Start Selector 1 — GND START"
+      },
+      {
+        "ctrl": "startPB1",
+        "target": "PRESS",
+        "action": "Start Pushbutton 1 — PRESS"
+      },
+      {
+        "ctrl": "power1",
+        "target": "IDLE",
+        "action": "ENG 1 Power Lever — IDLE"
+      },
+      {
+        "ctrl": "gen1",
+        "target": "ON",
+        "action": "GEN 1 — ON"
+      },
+      {
+        "ctrl": "start3",
+        "target": "GND START",
+        "action": "Start Selector 3 — GND START"
+      },
+      {
+        "ctrl": "startPB3",
+        "target": "PRESS",
+        "action": "Start Pushbutton 3 — PRESS"
+      },
+      {
+        "ctrl": "power3",
+        "target": "IDLE",
+        "action": "ENG 3 Power Lever — IDLE"
+      },
+      {
+        "ctrl": "gen3",
+        "target": "ON",
+        "action": "GEN 3 — ON"
+      }
+    ]
+  },
+  {
+    "id": "before_taxi",
+    "category": "Normal",
+    "name": "Before Taxi",
+    "desc": "All engines online — transfer to engine bleed, secure APU, configure for takeoff.",
+    "steps": [
+      {
+        "ctrl": "bleedCabin",
+        "target": "ON",
+        "action": "CABIN BLEED — ON",
+        "note": "Switch to engine bleed"
+      },
+      {
+        "ctrl": "bleedCrew",
+        "target": "ON",
+        "action": "CREW BLEED — ON"
+      },
+      {
+        "ctrl": "bleedPRV",
+        "target": "AUTO",
+        "action": "PRV — AUTO",
+        "note": "Auto-opens for ECU capacity"
+      },
+      {
+        "ctrl": "apuBleed",
+        "target": "OFF",
+        "action": "APU BLEED — OFF"
+      },
+      {
+        "ctrl": "apuGen",
+        "target": "OFF",
+        "action": "APU GEN — OFF"
+      },
+      {
+        "ctrl": "apuMaster",
+        "target": "OFF",
+        "action": "APU MASTER — OFF",
+        "note": "APU shutdown"
+      },
+      {
+        "ctrl": "pitotHt",
+        "target": "ON",
+        "action": "PITOT HEAT — ON"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "S+20°",
+        "action": "Slat/Flap Handle — S+20°",
+        "note": "T/O configuration"
+      },
+      {
+        "ctrl": "yawDamp",
+        "target": "ON",
+        "action": "YAW DAMP — ON",
+        "note": "Must be centered for T/O"
+      },
+      {
+        "ctrl": "parkBrk",
+        "target": "OFF",
+        "action": "Parking Brake — OFF",
+        "note": "Ready to taxi"
+      },
+      {
+        "ctrl": "taxiLt",
+        "target": "ON",
+        "action": "TAXI LIGHT — ON"
+      },
+      {
+        "ctrl": "xpdr",
+        "target": "TA/RA",
+        "action": "Transponder — TA/RA"
+      }
+    ]
+  },
+  {
+    "id": "before_takeoff",
+    "category": "Normal",
+    "name": "Before Takeoff (Line-up)",
+    "desc": "On runway, cleared for takeoff. Lights, strobes, transponder ALT.",
+    "steps": [
+      {
+        "ctrl": "strobe",
+        "target": "ON",
+        "action": "STROBES — ON"
+      },
+      {
+        "ctrl": "landingLt",
+        "target": "ON",
+        "action": "LANDING LIGHTS — ON"
+      },
+      {
+        "ctrl": "power1",
+        "target": "T/O",
+        "action": "ENG 1 Power — T/O thrust"
+      },
+      {
+        "ctrl": "power2",
+        "target": "T/O",
+        "action": "ENG 2 Power — T/O thrust"
+      },
+      {
+        "ctrl": "power3",
+        "target": "T/O",
+        "action": "ENG 3 Power — T/O thrust"
+      }
+    ]
+  },
+  {
+    "id": "after_takeoff",
+    "category": "Normal",
+    "name": "After Takeoff / Climb",
+    "desc": "Gear up at positive rate, slats/flaps retract on schedule, autopilot above 1,000 ft.",
+    "steps": [
+      {
+        "ctrl": "slatFlap",
+        "target": "SLATS",
+        "action": "At V2+15: SLATS only"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "CLEAN",
+        "action": "At V2+25: CLEAN WING"
+      },
+      {
+        "ctrl": "power1",
+        "target": "CRUISE",
+        "action": "Climb power — set"
+      },
+      {
+        "ctrl": "power2",
+        "target": "CRUISE",
+        "action": "Climb power — set"
+      },
+      {
+        "ctrl": "power3",
+        "target": "CRUISE",
+        "action": "Climb power — set"
+      },
+      {
+        "ctrl": "ap",
+        "target": "ON",
+        "action": "Autopilot — ENGAGE (>1,000 ft)"
+      },
+      {
+        "ctrl": "machTrim",
+        "target": "ON",
+        "action": "Mach Trim — ON (above 0.78 M)"
+      }
+    ]
+  },
+  {
+    "id": "approach_landing",
+    "category": "Normal",
+    "name": "Approach & Landing",
+    "desc": "Configure for landing. Slats → Flaps 20° → Gear → Flaps 48° on final.",
+    "steps": [
+      {
+        "ctrl": "slatFlap",
+        "target": "SLATS",
+        "action": "Slats — EXTEND (≤200 KIAS)"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "S+20°",
+        "action": "Flaps 20° (≤190 KIAS)"
+      },
+      {
+        "ctrl": "landingLt",
+        "target": "ON",
+        "action": "Landing lights — ON"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "S+48°",
+        "action": "Flaps 48° (≤175 KIAS, committed)"
+      },
+      {
+        "ctrl": "ap",
+        "target": "OFF",
+        "action": "Autopilot — OFF (by min altitude)"
+      },
+      {
+        "ctrl": "power1",
+        "target": "IDLE",
+        "action": "Touchdown — power levers IDLE"
+      },
+      {
+        "ctrl": "power2",
+        "target": "IDLE",
+        "action": "Power 2 — IDLE"
+      },
+      {
+        "ctrl": "power3",
+        "target": "IDLE",
+        "action": "Power 3 — IDLE"
+      },
+      {
+        "ctrl": "reverser",
+        "target": "DEPLOY",
+        "action": "Thrust Reverser (ENG 2) — DEPLOY",
+        "note": "Max 30 sec"
+      }
+    ]
+  },
+  {
+    "id": "after_landing",
+    "category": "Normal",
+    "name": "After Landing",
+    "desc": "Clean up after clearing the runway.",
+    "steps": [
+      {
+        "ctrl": "reverser",
+        "target": "STOW",
+        "action": "Thrust Reverser — STOW"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "CLEAN",
+        "action": "Slats/Flaps — RETRACT"
+      },
+      {
+        "ctrl": "strobe",
+        "target": "OFF",
+        "action": "STROBES — OFF"
+      },
+      {
+        "ctrl": "landingLt",
+        "target": "OFF",
+        "action": "LANDING LIGHTS — OFF"
+      },
+      {
+        "ctrl": "xpdr",
+        "target": "STBY",
+        "action": "Transponder — STBY"
+      },
+      {
+        "ctrl": "pitotHt",
+        "target": "OFF",
+        "action": "Pitot Heat — OFF"
+      },
+      {
+        "ctrl": "taxiLt",
+        "target": "ON",
+        "action": "Taxi Light — ON"
+      }
+    ]
+  },
+  {
+    "id": "shutdown",
+    "category": "Normal",
+    "name": "Shutdown",
+    "desc": "Engines to cutoff, APU off, batteries off. Aircraft secure.",
+    "steps": [
+      {
+        "ctrl": "parkBrk",
+        "target": "SET",
+        "action": "Parking Brake — SET"
+      },
+      {
+        "ctrl": "power1",
+        "target": "CUTOFF",
+        "action": "ENG 1 Power Lever — CUTOFF"
+      },
+      {
+        "ctrl": "power2",
+        "target": "CUTOFF",
+        "action": "ENG 2 Power Lever — CUTOFF"
+      },
+      {
+        "ctrl": "power3",
+        "target": "CUTOFF",
+        "action": "ENG 3 Power Lever — CUTOFF"
+      },
+      {
+        "ctrl": "gen1",
+        "target": "OFF",
+        "action": "GEN 1 — OFF"
+      },
+      {
+        "ctrl": "gen2",
+        "target": "OFF",
+        "action": "GEN 2 — OFF"
+      },
+      {
+        "ctrl": "gen3",
+        "target": "OFF",
+        "action": "GEN 3 — OFF"
+      },
+      {
+        "ctrl": "boost1",
+        "target": "OFF",
+        "action": "BOOST 1 — OFF"
+      },
+      {
+        "ctrl": "boost2",
+        "target": "OFF",
+        "action": "BOOST 2 — OFF"
+      },
+      {
+        "ctrl": "boost3",
+        "target": "OFF",
+        "action": "BOOST 3 — OFF"
+      },
+      {
+        "ctrl": "beacon",
+        "target": "OFF",
+        "action": "BEACON — OFF (last engine secured)"
+      },
+      {
+        "ctrl": "navLt",
+        "target": "OFF",
+        "action": "NAV — OFF"
+      },
+      {
+        "ctrl": "bat1",
+        "target": "OFF",
+        "action": "BAT 1 — OFF"
+      },
+      {
+        "ctrl": "bat2",
+        "target": "OFF",
+        "action": "BAT 2 — OFF"
+      }
+    ]
+  },
+  {
+    "id": "engine_fire",
+    "category": "Emergency (Memory)",
+    "name": "Engine Fire In Flight (ENG 1)",
+    "desc": "Fire light + warning horn. Bold-face memory items from CAE E-23.",
+    "steps": [
+      {
+        "ctrl": "warnHorn",
+        "target": "SILENCE",
+        "action": "Warning Horn — SILENCE"
+      },
+      {
+        "ctrl": "power1",
+        "target": "CUTOFF",
+        "action": "ENG 1 Power Lever — CUT-OFF"
+      },
+      {
+        "ctrl": "firePull1",
+        "target": "PULL",
+        "action": "FIRE PULL 1 — PULLED"
+      },
+      {
+        "ctrl": "fireExt1",
+        "target": "POS 1",
+        "action": "Fire Extinguisher 1 — POSITION 1"
+      },
+      {
+        "ctrl": "fireExt1",
+        "target": "POS 2",
+        "action": "If fire persists: POSITION 2"
+      },
+      {
+        "ctrl": "gen1",
+        "target": "OFF",
+        "action": "GEN 1 — OFF (engine secured)"
+      },
+      {
+        "ctrl": "boost1",
+        "target": "OFF",
+        "action": "BOOST 1 — OFF"
+      }
+    ]
+  },
+  {
+    "id": "apu_fire",
+    "category": "Emergency (Memory)",
+    "name": "APU Fire",
+    "desc": "FIRE APU light + horn. Memory items from CAE E-24.",
+    "steps": [
+      {
+        "ctrl": "warnHorn",
+        "target": "SILENCE",
+        "action": "Warning Horn — SILENCE"
+      },
+      {
+        "ctrl": "apuMaster",
+        "target": "OFF",
+        "action": "APU MASTER — DEPRESS / OFF"
+      },
+      {
+        "ctrl": "fireApu",
+        "target": "PULL",
+        "action": "FIRE APU switch — POSITION 1 (PULL)"
+      },
+      {
+        "ctrl": "apuBleed",
+        "target": "OFF",
+        "action": "APU BLEED — OFF"
+      },
+      {
+        "ctrl": "apuGen",
+        "target": "OFF",
+        "action": "APU GEN — OFF"
+      }
+    ]
+  },
+  {
+    "id": "smoke_removal",
+    "category": "Emergency (Memory)",
+    "name": "Smoke Removal",
+    "desc": "Smoke in cockpit. Don oxygen 100%+EMER, isolate bleed, descend.",
+    "steps": [
+      {
+        "ctrl": "o2Crew",
+        "target": "100%+EMER",
+        "action": "Crew O2 Masks — DONNED 100% + EMERGENCY"
+      },
+      {
+        "ctrl": "smokeMask",
+        "target": "DONNED",
+        "action": "Smoke Goggles — DONNED"
+      },
+      {
+        "ctrl": "micSel",
+        "target": "MASK",
+        "action": "Microphone Selector — MASK"
+      },
+      {
+        "ctrl": "noSmoking",
+        "target": "ON",
+        "action": "No Smoking — ON"
+      },
+      {
+        "ctrl": "o2Pax",
+        "target": "OVERRIDE",
+        "action": "PAX O2 — OVERRIDE"
+      },
+      {
+        "ctrl": "bleedISO",
+        "target": "CLOSED",
+        "action": "Bleed ISO — CLOSED"
+      },
+      {
+        "ctrl": "bleedCrew",
+        "target": "OFF",
+        "action": "CREW Bleed — OFF"
+      },
+      {
+        "ctrl": "bleedPRV",
+        "target": "OFF",
+        "action": "PRV — OFF"
+      },
+      {
+        "ctrl": "cabinPress",
+        "target": "DUMP",
+        "action": "Cabin Press — DUMP (below 12,000 ft)"
+      }
+    ]
+  },
+  {
+    "id": "all_engines_out",
+    "category": "Emergency (Memory)",
+    "name": "All Engines Out",
+    "desc": "Catastrophic — Phase 1 actions. Glide planning + airstart attempt.",
+    "steps": [
+      {
+        "ctrl": "cBus",
+        "target": "OFF",
+        "action": "C Bus — OFF"
+      },
+      {
+        "ctrl": "dBus",
+        "target": "OFF",
+        "action": "D Bus — OFF"
+      },
+      {
+        "ctrl": "stbyPump",
+        "target": "ON",
+        "action": "STBY Pump — ON"
+      },
+      {
+        "ctrl": "start1",
+        "target": "AIR START",
+        "action": "Start Selector 1 — AIRSTART"
+      },
+      {
+        "ctrl": "start2",
+        "target": "AIR START",
+        "action": "Start Selector 2 — AIRSTART"
+      },
+      {
+        "ctrl": "start3",
+        "target": "AIR START",
+        "action": "Start Selector 3 — AIRSTART"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "SLATS",
+        "action": "Emergency Slats — EXTEND (200 kts max)"
+      }
+    ]
+  },
+  {
+    "id": "gen3_inop",
+    "category": "Abnormal",
+    "name": "Three Generators Inop → Battery Mgmt",
+    "desc": "All three generators failed. Battery preservation per E-41. Load shed.",
+    "steps": [
+      {
+        "ctrl": "busTie",
+        "target": "NORM",
+        "action": "BUS TIE — FLIGHT NORMAL"
+      },
+      {
+        "ctrl": "cBus",
+        "target": "OFF",
+        "action": "C Bus — OFF"
+      },
+      {
+        "ctrl": "dBus",
+        "target": "OFF",
+        "action": "D Bus — OFF"
+      },
+      {
+        "ctrl": "boost1",
+        "target": "OFF",
+        "action": "BOOST 1 — OFF (battery preservation)"
+      },
+      {
+        "ctrl": "boost2",
+        "target": "OFF",
+        "action": "BOOST 2 — OFF"
+      },
+      {
+        "ctrl": "boost3",
+        "target": "OFF",
+        "action": "BOOST 3 — OFF"
+      },
+      {
+        "ctrl": "wshldL",
+        "target": "OFF",
+        "action": "Windshield L Heat — OFF"
+      },
+      {
+        "ctrl": "wshldR",
+        "target": "OFF",
+        "action": "Windshield R Heat — OFF"
+      },
+      {
+        "ctrl": "pitotHt",
+        "target": "OFF",
+        "action": "Pitot Heat — OFF (if not icing)"
+      }
+    ]
+  },
+  {
+    "id": "gen_3_only",
+    "category": "Abnormal",
+    "name": "GEN 3 INOP — Bus Tie Required",
+    "desc": "Right Main DC loses its only generator. Tie to repower from left.",
+    "steps": [
+      {
+        "ctrl": "busTie",
+        "target": "TIED",
+        "action": "BUS TIE — TIED",
+        "note": "Repowers Right Main from left side"
+      },
+      {
+        "ctrl": "cBus",
+        "target": "OFF",
+        "action": "C Bus — OFF (load shed)"
+      },
+      {
+        "ctrl": "dBus",
+        "target": "OFF",
+        "action": "D Bus — OFF (load shed)"
+      }
+    ]
+  },
+  {
+    "id": "rto",
+    "category": "Drill",
+    "name": "Rejected Takeoff (Before V1)",
+    "desc": "Engine failure before V1 — maximum braking, idle, airbrake 2, reverser deploy.",
+    "steps": [
+      {
+        "ctrl": "power1",
+        "target": "IDLE",
+        "action": "ENG 1 Power — IDLE"
+      },
+      {
+        "ctrl": "power2",
+        "target": "IDLE",
+        "action": "ENG 2 Power — IDLE"
+      },
+      {
+        "ctrl": "power3",
+        "target": "IDLE",
+        "action": "ENG 3 Power — IDLE"
+      },
+      {
+        "ctrl": "airbrake",
+        "target": "POS 2",
+        "action": "Airbrake Handle — POSITION 2"
+      },
+      {
+        "ctrl": "reverser",
+        "target": "DEPLOY",
+        "action": "Thrust Reverser (ENG 2) — DEPLOY"
+      }
+    ]
+  },
+  {
+    "id": "engfail_after_v1",
+    "category": "Drill",
+    "name": "Engine Failure After V1 (ENG 1)",
+    "desc": "After V1: rotate at VR, V2 minimum, gear up positive rate, schedule cleanup.",
+    "steps": [
+      {
+        "ctrl": "power2",
+        "target": "T/O",
+        "action": "Maintain T/O thrust on operating engines"
+      },
+      {
+        "ctrl": "power3",
+        "target": "T/O",
+        "action": "Maintain T/O thrust"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "SLATS",
+        "action": "At V2+15: SLATS only"
+      },
+      {
+        "ctrl": "slatFlap",
+        "target": "CLEAN",
+        "action": "At V2+25: CLEAN WING"
+      },
+      {
+        "ctrl": "power1",
+        "target": "CUTOFF",
+        "action": "ENG 1 — Secure (after climbing)"
+      },
+      {
+        "ctrl": "firePull1",
+        "target": "PULL",
+        "action": "FIRE PULL 1 — PULLED (if no restart)"
+      }
+    ]
+  },
+  {
+    "id": "antiskid_fail",
+    "category": "Drill",
+    "name": "Antiskid Failure on Rollout (N114TD)",
+    "desc": "Antiskid failed during landing rollout. Select EMER BRAKE, modulate manually. Greenville 2018 lesson.",
+    "steps": [
+      {
+        "ctrl": "brakeSel",
+        "target": "EMER",
+        "action": "Brake Selector — EMER (Sys 2)"
+      },
+      {
+        "ctrl": "stbyPump",
+        "target": "ON",
+        "action": "STBY Pump — ON"
+      },
+      {
+        "ctrl": "reverser",
+        "target": "DEPLOY",
+        "action": "Thrust Reverser — DEPLOY (already)"
+      }
+    ]
+  }
+]

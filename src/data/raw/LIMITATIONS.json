@@ -1,0 +1,551 @@
+[
+  {
+    "cat": "General",
+    "items": [
+      {
+        "k": "Maximum passenger seats",
+        "v": "19"
+      },
+      {
+        "k": "Max passengers above 45,000 ft",
+        "v": "12 (max 49,000 ft w/ SB F50-163)"
+      },
+      {
+        "k": "Minimum crew",
+        "v": "Two pilots (1 PIC + 1 SIC)"
+      },
+      {
+        "k": "Authorized operations",
+        "v": "Day/Night VFR, IFR & Cat I auto-approach, extended overwater, icing"
+      },
+      {
+        "k": "Wing-span",
+        "v": "61' 10\""
+      },
+      {
+        "k": "Length",
+        "v": "60' 9\""
+      },
+      {
+        "k": "Height",
+        "v": "22' 10\""
+      },
+      {
+        "k": "Turning radius (steering engaged)",
+        "v": "44' 3\""
+      }
+    ]
+  },
+  {
+    "cat": "Weights",
+    "items": [
+      {
+        "k": "Max Ramp Weight",
+        "v": "38,800 lbs (40,780 w/ SB 161)"
+      },
+      {
+        "k": "Max Takeoff Weight",
+        "v": "38,800 lbs (40,780 w/ SB 161)"
+      },
+      {
+        "k": "Max Landing Weight",
+        "v": "35,715 lbs"
+      },
+      {
+        "k": "Max Zero Fuel Weight",
+        "v": "25,570 lbs"
+      },
+      {
+        "k": "Minimum Flight Weight",
+        "v": "18,959 lbs"
+      },
+      {
+        "k": "Baggage Compartment",
+        "v": "2,205 lbs (max floor loading 123 lbs/ft²)"
+      }
+    ]
+  },
+  {
+    "cat": "Altitude & Pressurization",
+    "items": [
+      {
+        "k": "Airport pressure altitude",
+        "v": "-1,000 ft to +10,000 ft (to +14,000 ft w/ SB154)"
+      },
+      {
+        "k": "Max operating altitude",
+        "v": "45,000 ft (49,000 ft w/ SB163)"
+      },
+      {
+        "k": "Max cabin differential pressure",
+        "v": "9.1 psi (9.5 psi w/ SB163)"
+      }
+    ]
+  },
+  {
+    "cat": "Airspeeds",
+    "items": [
+      {
+        "k": "VMO at Sea Level",
+        "v": "350 KIAS"
+      },
+      {
+        "k": "VMO SL to 10,000 ft",
+        "v": "Linear 350 to 370 KIAS"
+      },
+      {
+        "k": "VMO 10,000 to 24,000 ft",
+        "v": "370 KIAS"
+      },
+      {
+        "k": "MMO above 24,000 ft",
+        "v": "0.86 M"
+      },
+      {
+        "k": "VLO / MLO (gear operating)",
+        "v": "190 KIAS / 0.70 M"
+      },
+      {
+        "k": "VLE / MLE (gear extended)",
+        "v": "220 KIAS / 0.75 M"
+      },
+      {
+        "k": "VA (Maneuvering)",
+        "v": "210 KIAS"
+      },
+      {
+        "k": "VMCA (Min Control Air)",
+        "v": "82.5 KIAS"
+      },
+      {
+        "k": "Turbulent Air Penetration",
+        "v": "280 KIAS / 0.76 M"
+      },
+      {
+        "k": "Cracked Windshield",
+        "v": "230 KIAS"
+      },
+      {
+        "k": "Windshield Wiper Operating",
+        "v": "205 KIAS"
+      },
+      {
+        "k": "DV Window Opening",
+        "v": "180 KIAS"
+      },
+      {
+        "k": "Tire Speed (ground speed)",
+        "v": "180 kts"
+      }
+    ]
+  },
+  {
+    "cat": "Flaps & Slats",
+    "items": [
+      {
+        "k": "Slats Extended (VFE)",
+        "v": "200 KIAS"
+      },
+      {
+        "k": "Slats + Flaps 20°",
+        "v": "190 KIAS"
+      },
+      {
+        "k": "Slats + Flaps 48°",
+        "v": "175 KIAS"
+      },
+      {
+        "k": "Max altitude — slats/flaps extended",
+        "v": "20,000 ft"
+      },
+      {
+        "k": "Slats with AUTO SLAT light ON (max)",
+        "v": "270 KIAS"
+      },
+      {
+        "k": "Airbrakes — within 500 ft AGL",
+        "v": "Not recommended"
+      }
+    ]
+  },
+  {
+    "cat": "Load Factors",
+    "items": [
+      {
+        "k": "Flaps Up",
+        "v": "+2.6 g to -1.0 g"
+      },
+      {
+        "k": "Flaps Down",
+        "v": "+2.0 g to 0 g"
+      }
+    ]
+  },
+  {
+    "cat": "Wind / Runway",
+    "items": [
+      {
+        "k": "Tail Wind Component",
+        "v": "10 kts"
+      },
+      {
+        "k": "Demonstrated Crosswind",
+        "v": "23 kts"
+      },
+      {
+        "k": "Runway Slope (up/down)",
+        "v": "± 2.5%"
+      },
+      {
+        "k": "Runway Surface",
+        "v": "Hard surface (Unpaved w/ SB F50-071-R1)"
+      }
+    ]
+  },
+  {
+    "cat": "Hydraulic",
+    "items": [
+      {
+        "k": "Max altitude — Stand-by pump operation",
+        "v": "45,000 ft"
+      },
+      {
+        "k": "Hydraulic Fluid",
+        "v": "MIL-H-5606 (NATO H515 or H520)"
+      },
+      {
+        "k": "Either or both Hyd Inop — Max Airspeed",
+        "v": "260 KIAS / 0.76 M"
+      }
+    ]
+  },
+  {
+    "cat": "Electrical",
+    "items": [
+      {
+        "k": "Maximum DC Voltage",
+        "v": "32 VDC"
+      },
+      {
+        "k": "Max Generator Output (up to 39,000 ft)",
+        "v": "300 A"
+      },
+      {
+        "k": "Max Generator Output (above 39,000 ft)",
+        "v": "250 A"
+      },
+      {
+        "k": "Transient Gen Output (1 min max)",
+        "v": "350 A"
+      },
+      {
+        "k": "Inverter Maximum Output",
+        "v": "750 VA"
+      },
+      {
+        "k": "Battery WARM (amber)",
+        "v": "≥ 120°F"
+      },
+      {
+        "k": "Battery HOT (red)",
+        "v": "≥ 150°F (160°F w/ SB 295)"
+      },
+      {
+        "k": "GPU Start Limit",
+        "v": "Max 1,000 A and 28 VDC"
+      }
+    ]
+  },
+  {
+    "cat": "Fuel",
+    "items": [
+      {
+        "k": "Total Fuel (w/o SB 496 / w/ SB 496)",
+        "v": "15,514 lbs / 15,458 lbs"
+      },
+      {
+        "k": "Left System Capacity",
+        "v": "5,152 lbs (5,124 w/ SB 496)"
+      },
+      {
+        "k": "Right System Capacity",
+        "v": "5,152 lbs (5,124 w/ SB 496)"
+      },
+      {
+        "k": "Center System Capacity",
+        "v": "5,210 lbs"
+      },
+      {
+        "k": "Max Fuel Imbalance for Flight",
+        "v": "None"
+      },
+      {
+        "k": "Pressure Fueling — Max",
+        "v": "50 PSI"
+      },
+      {
+        "k": "Fuel Computers",
+        "v": "Operational for T/O (except AFM Annex 5)"
+      }
+    ]
+  },
+  {
+    "cat": "APU",
+    "items": [
+      {
+        "k": "Operation",
+        "v": "Ground only"
+      },
+      {
+        "k": "Bleed Switch ON — restriction",
+        "v": "No engine or airframe anti-ice tests"
+      },
+      {
+        "k": "Max Rated N1",
+        "v": "100%"
+      },
+      {
+        "k": "Max Allowable N1",
+        "v": "110%"
+      },
+      {
+        "k": "Max ITT Rated",
+        "v": "680°C"
+      },
+      {
+        "k": "Max ITT Allowable",
+        "v": "732°C"
+      },
+      {
+        "k": "Max Generator Output",
+        "v": "300 A"
+      }
+    ]
+  },
+  {
+    "cat": "Powerplant (TFE 731-3-1C)",
+    "items": [
+      {
+        "k": "Engine Model",
+        "v": "Honeywell (Garrett) TFE 731-3-1C"
+      },
+      {
+        "k": "Takeoff Thrust (uninstalled, SL, ISA)",
+        "v": "3,700 lbs"
+      },
+      {
+        "k": "Max Continuous Thrust",
+        "v": "3,700 lbs"
+      },
+      {
+        "k": "Thrust Setting Parameter",
+        "v": "N1"
+      },
+      {
+        "k": "N1 max — T/O & Max Cont",
+        "v": "101.5%"
+      },
+      {
+        "k": "N2 max — T/O & Max Cont",
+        "v": "100%"
+      },
+      {
+        "k": "N1 Transient (1 min)",
+        "v": "103% / N2 103%"
+      },
+      {
+        "k": "N1 Transient (5 sec)",
+        "v": "105% / N2 105%"
+      },
+      {
+        "k": "ITT — Start Normal",
+        "v": "907°C (3-1C) / 910°C (3-1D)"
+      },
+      {
+        "k": "ITT — Start Transient (10 sec)",
+        "v": "927°C / 929°C"
+      },
+      {
+        "k": "ITT — Takeoff Normal (5 min)",
+        "v": "907°C / 910°C"
+      },
+      {
+        "k": "ITT — Takeoff Transient (10 sec)",
+        "v": "917°C"
+      },
+      {
+        "k": "ITT — Max Continuous",
+        "v": "885°C"
+      },
+      {
+        "k": "Ground Start: 10% N2 to light-off",
+        "v": "10 sec max"
+      },
+      {
+        "k": "Ground Start: light-off to idle",
+        "v": "50 sec max"
+      },
+      {
+        "k": "Wind-milling start (N2 to 60%)",
+        "v": "25 sec max"
+      },
+      {
+        "k": "Oil Pressure — Min Takeoff/Continuous",
+        "v": "38 PSI"
+      },
+      {
+        "k": "Oil Pressure — Max Takeoff/Continuous/Idle",
+        "v": "46 PSI"
+      },
+      {
+        "k": "Oil Pressure — Min Idle",
+        "v": "25 PSI"
+      },
+      {
+        "k": "Oil Pressure — Max Transient (<3 min)",
+        "v": "55 PSI"
+      },
+      {
+        "k": "Oil Temp — Max SL to 30,000 ft",
+        "v": "127°C"
+      },
+      {
+        "k": "Oil Temp — Max above 30,000 ft",
+        "v": "140°C"
+      },
+      {
+        "k": "Oil Temp — Transient (<2 min)",
+        "v": "149°C"
+      },
+      {
+        "k": "Oil Temp — Minimum",
+        "v": "-40°C"
+      },
+      {
+        "k": "Oil Temp — Min for power above idle",
+        "v": "+30°C"
+      },
+      {
+        "k": "Engine Synchronizer",
+        "v": "Not used T/O, landing, missed approach"
+      }
+    ]
+  },
+  {
+    "cat": "Thrust Reverser",
+    "items": [
+      {
+        "k": "Operation",
+        "v": "Ground use only"
+      },
+      {
+        "k": "Use for taxiing in reverse",
+        "v": "Prohibited"
+      },
+      {
+        "k": "Max N1 during reverse",
+        "v": "93% N1"
+      },
+      {
+        "k": "Go-around after reverse selected",
+        "v": "Prohibited"
+      },
+      {
+        "k": "Thrust Reverser deployed in-flight (max)",
+        "v": "230 KIAS"
+      },
+      {
+        "k": "Max continuous usage",
+        "v": "30 seconds"
+      },
+      {
+        "k": "Time between consecutive uses",
+        "v": "4.5 minutes"
+      }
+    ]
+  },
+  {
+    "cat": "Anti-Ice",
+    "items": [
+      {
+        "k": "Icing conditions exist (ground)",
+        "v": "OAT < 10°C with visible moisture"
+      },
+      {
+        "k": "Icing conditions exist (in-flight)",
+        "v": "TAT 10°C"
+      },
+      {
+        "k": "Engine & Wing Anti-Ice — restriction",
+        "v": "Not used with OAT > 10°C"
+      },
+      {
+        "k": "Wing Anti-Ice on ground",
+        "v": "Testing only — short duration"
+      }
+    ]
+  },
+  {
+    "cat": "Avionics",
+    "items": [
+      {
+        "k": "Autopilot for Takeoff/Landing",
+        "v": "OFF"
+      },
+      {
+        "k": "Yaw Damper for Takeoff",
+        "v": "Must be centered"
+      },
+      {
+        "k": "Min Engaged Altitude — Enroute",
+        "v": "1,000 ft"
+      },
+      {
+        "k": "Min Engaged Altitude — Approach (RA op)",
+        "v": "50 ft"
+      },
+      {
+        "k": "Min Engaged Altitude — Approach (RA inop)",
+        "v": "100 ft"
+      },
+      {
+        "k": "Mach Trim Inop + A/P off — Max",
+        "v": "0.78 M"
+      }
+    ]
+  },
+  {
+    "cat": "Landing Gear & Brakes",
+    "items": [
+      {
+        "k": "Anti-Skid",
+        "v": "Must be operative"
+      },
+      {
+        "k": "Nose wheel tire requirement",
+        "v": "Chinned tires"
+      },
+      {
+        "k": "Normal RTO Stop — Kinetic Energy",
+        "v": "14,697 KJ"
+      },
+      {
+        "k": "Maximum RTO Stop — Kinetic Energy",
+        "v": "18,249 KJ"
+      }
+    ]
+  },
+  {
+    "cat": "Lighting",
+    "items": [
+      {
+        "k": "Landing Light",
+        "v": "15 min ON / 45 min OFF"
+      },
+      {
+        "k": "Taxi Light",
+        "v": "No limit — OFF after gear retraction"
+      }
+    ]
+  }
+]
