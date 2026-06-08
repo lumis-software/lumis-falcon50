@@ -1,10 +1,13 @@
-const CACHE_NAME = "falcon50-v1";
+const CACHE_NAME = "falcon50-v2";
 const ASSETS = [
   "./",
   "./index.html",
   "./manifest.json",
   "./icon-192.png",
+  "./icon-256.png",
+  "./icon-384.png",
   "./icon-512.png",
+  "./icon-1024.png",
   "./apple-touch-icon.png",
   "./favicon-32.png",
   "./favicon-16.png"
