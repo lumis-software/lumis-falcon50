@@ -48,6 +48,17 @@ iterate toward a pre-courseware / "instructor replacement" feel.
    component, scores you across all parts in random order, and gives instant
    correct/incorrect feedback. This is the CPaT "Practice" stage of
    Demo → Practice → Knowledge Check.
+6. **Soft depth shadow** on the airframe artwork for a premium, 3-D feel.
+7. **Caution & Warning cross-reference** (new "Caution & Warning" mode) — a
+   simulated annunciator panel of colour-coded lights; tap one to see *what you
+   see/hear → what it means → what to do → where to look (panel) → open that
+   system's diagram*. Warnings are grounded in the real bold-face memory items
+   (cues + actions); cautions are standard Falcon 50 categories mapped to
+   systems. Each system diagram now also lists its **Related cockpit
+   indications** as chips that deep-link into this reference.
+   - **No exact annunciator-panel layout exists in the extracted reference**, so
+     this is a study cross-reference. Drop the real annunciator photo/diagram in
+     `public/handbook/` and I'll pin it to the exact layout and colours.
 
 ### Tooling added (dev-only, for self-review)
 - `scripts/render-falcon.mjs` — renders the artwork to PNG via the TypeScript

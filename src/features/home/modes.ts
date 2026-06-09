@@ -10,6 +10,7 @@ import {
   RotateCcw,
   ScrollText,
   Settings2,
+  Siren,
   SlidersHorizontal,
   Sparkles,
 } from "lucide-react";
@@ -62,6 +63,16 @@ export const STUDY_MODES: StudyMode[] = [
     icon: AlertTriangle,
     accent: "red",
     path: "/memory",
+    ready: true,
+  },
+  {
+    id: "warnings",
+    title: "Caution & Warning",
+    description:
+      "See a light? Know what it means, what to do, and which system to check.",
+    icon: Siren,
+    accent: "red",
+    path: "/warnings",
     ready: true,
   },
   {

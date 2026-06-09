@@ -33,6 +33,11 @@ const MemoryScreen = lazy(() =>
     default: m.MemoryScreen,
   })),
 );
+const WarningsScreen = lazy(() =>
+  import("@/features/warnings/WarningsScreen").then((m) => ({
+    default: m.WarningsScreen,
+  })),
+);
 const LimitsScreen = lazy(() =>
   import("@/features/limits/LimitsScreen").then((m) => ({
     default: m.LimitsScreen,
@@ -91,6 +96,7 @@ export default function App() {
               <Route path="/quiz" element={<QuizScreen />} />
               <Route path="/study" element={<StudyScreen />} />
               <Route path="/memory" element={<MemoryScreen />} />
+              <Route path="/warnings" element={<WarningsScreen />} />
               <Route path="/limits" element={<LimitsScreen />} />
               <Route path="/systems" element={<SystemsScreen />} />
               <Route path="/trainer" element={<TrainerScreen />} />
