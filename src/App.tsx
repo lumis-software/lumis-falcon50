@@ -1,30 +1,91 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AircraftProvider } from "@/providers/AircraftProvider";
 import { AuthProvider } from "@/providers/AuthProvider";
 import { HomeScreen } from "@/features/home/HomeScreen";
-import { QuizScreen } from "@/features/quiz/QuizScreen";
-import { ComingSoon } from "@/features/ComingSoon";
+
+const QuizScreen = lazy(() =>
+  import("@/features/quiz/QuizScreen").then((m) => ({ default: m.QuizScreen })),
+);
+const MissedScreen = lazy(() =>
+  import("@/features/quiz/MissedScreen").then((m) => ({
+    default: m.MissedScreen,
+  })),
+);
+const StudyScreen = lazy(() =>
+  import("@/features/study/StudyScreen").then((m) => ({
+    default: m.StudyScreen,
+  })),
+);
+const MemoryScreen = lazy(() =>
+  import("@/features/memory/MemoryScreen").then((m) => ({
+    default: m.MemoryScreen,
+  })),
+);
+const LimitsScreen = lazy(() =>
+  import("@/features/limits/LimitsScreen").then((m) => ({
+    default: m.LimitsScreen,
+  })),
+);
+const ProceduresScreen = lazy(() =>
+  import("@/features/procedures/ProceduresScreen").then((m) => ({
+    default: m.ProceduresScreen,
+  })),
+);
+const OralScreen = lazy(() =>
+  import("@/features/oral/OralScreen").then((m) => ({ default: m.OralScreen })),
+);
+const SystemsScreen = lazy(() =>
+  import("@/features/systems/SystemsScreen").then((m) => ({
+    default: m.SystemsScreen,
+  })),
+);
+const DifferencesScreen = lazy(() =>
+  import("@/features/differences/DifferencesScreen").then((m) => ({
+    default: m.DifferencesScreen,
+  })),
+);
+const PhasesScreen = lazy(() =>
+  import("@/features/phases/PhasesScreen").then((m) => ({
+    default: m.PhasesScreen,
+  })),
+);
+const TrainerScreen = lazy(() =>
+  import("@/features/trainer/TrainerScreen").then((m) => ({
+    default: m.TrainerScreen,
+  })),
+);
+
+function RouteFallback() {
+  return (
+    <div className="grid min-h-[60vh] place-items-center text-ink-500">
+      <div className="size-8 animate-spin rounded-full border-2 border-ink-700 border-t-brand-500" />
+    </div>
+  );
+}
 
 export default function App() {
   return (
     <AuthProvider>
       <AircraftProvider>
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/quiz" element={<QuizScreen />} />
-            <Route path="/study" element={<ComingSoon title="Study Mode" />} />
-            <Route path="/memory" element={<ComingSoon title="Memory Items" />} />
-            <Route path="/limits" element={<ComingSoon title="Limitations" />} />
-            <Route path="/systems" element={<ComingSoon title="Systems & Schematics" />} />
-            <Route path="/trainer" element={<ComingSoon title="Procedure Trainer" />} />
-            <Route path="/phases" element={<ComingSoon title="Live Flight Phases" />} />
-            <Route path="/procedures" element={<ComingSoon title="Procedures" />} />
-            <Route path="/oral" element={<ComingSoon title="Checkride Oral Prep" />} />
-            <Route path="/differences" element={<ComingSoon title="Differences & Specs" />} />
-            <Route path="/missed" element={<ComingSoon title="Review Missed" />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <Suspense fallback={<RouteFallback />}>
+            <Routes>
+              <Route path="/" element={<HomeScreen />} />
+              <Route path="/quiz" element={<QuizScreen />} />
+              <Route path="/study" element={<StudyScreen />} />
+              <Route path="/memory" element={<MemoryScreen />} />
+              <Route path="/limits" element={<LimitsScreen />} />
+              <Route path="/systems" element={<SystemsScreen />} />
+              <Route path="/trainer" element={<TrainerScreen />} />
+              <Route path="/phases" element={<PhasesScreen />} />
+              <Route path="/procedures" element={<ProceduresScreen />} />
+              <Route path="/oral" element={<OralScreen />} />
+              <Route path="/differences" element={<DifferencesScreen />} />
+              <Route path="/missed" element={<MissedScreen />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </AircraftProvider>
     </AuthProvider>

@@ -42,7 +42,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: BookOpen,
     accent: "purple",
     path: "/study",
-    ready: false,
+    ready: true,
   },
   {
     id: "memory",
@@ -51,7 +51,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: AlertTriangle,
     accent: "red",
     path: "/memory",
-    ready: false,
+    ready: true,
   },
   {
     id: "limits",
@@ -60,7 +60,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: SlidersHorizontal,
     accent: "amber",
     path: "/limits",
-    ready: false,
+    ready: true,
   },
   {
     id: "systems",
@@ -69,7 +69,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: Settings2,
     accent: "emerald",
     path: "/systems",
-    ready: false,
+    ready: true,
   },
   {
     id: "trainer",
@@ -78,7 +78,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: ListChecks,
     accent: "emerald",
     path: "/trainer",
-    ready: false,
+    ready: true,
   },
   {
     id: "phases",
@@ -87,7 +87,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: Plane,
     accent: "sky",
     path: "/phases",
-    ready: false,
+    ready: true,
   },
   {
     id: "procedures",
@@ -96,7 +96,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: ScrollText,
     accent: "sky",
     path: "/procedures",
-    ready: false,
+    ready: true,
   },
   {
     id: "oral",
@@ -105,7 +105,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: Sparkles,
     accent: "brand",
     path: "/oral",
-    ready: false,
+    ready: true,
   },
   {
     id: "differences",
@@ -114,7 +114,7 @@ export const STUDY_MODES: StudyMode[] = [
     icon: Layers,
     accent: "amber",
     path: "/differences",
-    ready: false,
+    ready: true,
   },
   {
     id: "missed",
@@ -123,6 +123,6 @@ export const STUDY_MODES: StudyMode[] = [
     icon: RotateCcw,
     accent: "red",
     path: "/missed",
-    ready: false,
+    ready: true,
   },
 ];

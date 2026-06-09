@@ -11,10 +11,24 @@ import { useProgress } from "@/state/progressStore";
 
 type Phase = "setup" | "running" | "done";
 
-export function QuizScreen() {
-  const [phase, setPhase] = useState<Phase>("setup");
+interface QuizScreenProps {
+  /** When provided, skips category setup and quizzes this fixed deck. */
+  fixedDeck?: Question[];
+  title?: string;
+  emptyMessage?: string;
+}
+
+export function QuizScreen({
+  fixedDeck,
+  title = "Quiz Mode",
+  emptyMessage,
+}: QuizScreenProps = {}) {
+  const isFixed = fixedDeck !== undefined;
+  const [phase, setPhase] = useState<Phase>(isFixed ? "running" : "setup");
   const [category, setCategory] = useState<string | null>(null);
-  const [deck, setDeck] = useState<Question[]>([]);
+  const [deck, setDeck] = useState<Question[]>(() =>
+    isFixed ? shuffle(fixedDeck) : [],
+  );
   const [idx, setIdx] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -25,8 +39,22 @@ export function QuizScreen() {
     [category],
   );
 
+  if (isFixed && fixedDeck.length === 0) {
+    return (
+      <div>
+        <Header subtitle={title} showBack />
+        <div className="mx-auto max-w-3xl px-5 py-16 text-center [animation:var(--animate-fade-in)]">
+          <div className="mb-3 text-5xl">🎉</div>
+          <p className="text-lg">
+            {emptyMessage ?? "Nothing to review — you're all caught up."}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   function start() {
-    setDeck(shuffle(pool));
+    setDeck(shuffle(isFixed ? fixedDeck : pool));
     setIdx(0);
     setSelected(null);
     setScore(0);
@@ -54,7 +82,7 @@ export function QuizScreen() {
   if (phase === "setup") {
     return (
       <div>
-        <Header subtitle="Quiz Mode" showBack />
+        <Header subtitle={title} showBack />
         <div className="mx-auto max-w-3xl px-5 py-6 [animation:var(--animate-fade-in)]">
           <h2 className="text-lg font-semibold">Choose a category</h2>
           <p className="mb-4 text-sm text-ink-400">
@@ -103,9 +131,11 @@ export function QuizScreen() {
             {pct}%
           </p>
           <div className="mt-6 flex justify-center gap-3">
-            <Button variant="secondary" onClick={() => setPhase("setup")}>
-              Change category
-            </Button>
+            {!isFixed && (
+              <Button variant="secondary" onClick={() => setPhase("setup")}>
+                Change category
+              </Button>
+            )}
             <Button onClick={start}>Try again</Button>
           </div>
         </div>
