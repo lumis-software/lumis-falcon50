@@ -4,7 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { fileURLToPath, URL } from "node:url";
 
+// Base path. Defaults to "/" (Vercel / custom domain / local). For a GitHub
+// Pages project site, the deploy workflow sets VITE_BASE=/lumis-falcon50/.
+const base = process.env.VITE_BASE ?? "/";
+
 export default defineConfig({
+  base,
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -25,8 +30,8 @@ export default defineConfig({
         short_name: "Lumis F50",
         description:
           "Multi-aircraft pilot study, testing, and proficiency trainer for the Dassault Falcon family. By Lumis.",
-        start_url: "/",
-        scope: "/",
+        start_url: base,
+        scope: base,
         display: "standalone",
         orientation: "any",
         background_color: "#020617",
@@ -42,7 +47,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,png,svg,woff2}"],
-        navigateFallback: "index.html",
+        navigateFallback: `${base}index.html`,
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         runtimeCaching: [

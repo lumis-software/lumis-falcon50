@@ -6,7 +6,7 @@
   "description": "Lumis Falcon Trainer — multi-aircraft pilot study, testing, and proficiency PWA.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc -b --noEmit"

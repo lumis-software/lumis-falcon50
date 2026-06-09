@@ -57,6 +57,8 @@ const TrainerScreen = lazy(() =>
   })),
 );
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
 function RouteFallback() {
   return (
     <div className="grid min-h-[60vh] place-items-center text-ink-500">
@@ -70,7 +72,7 @@ export default function App() {
     <AccessGate>
       <AuthProvider>
         <AircraftProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={basename}>
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<HomeScreen />} />
