@@ -1,26 +1,61 @@
-# Lumis Falcon 50 — Systems Review
+# Lumis Falcon Trainer
 
-Interactive training app for the Dassault Falcon 50.
+A multi-aircraft pilot study, testing, and proficiency PWA for the Dassault
+Falcon family (Falcon 50 today; 50EX / 900 / 900 EASy expanding). Installable,
+works fully offline, with cloud sync and per-pilot accounts on the roadmap.
 
-## Features
+## Tech stack
 
-- **9 interactive system schematics** — Hydraulics, Electrical DC/AC, Fuel, Pneumatics, Flight Controls, Anti-Ice, Powerplant/APU, Landing Gear. Click components for info, toggle failure scenarios, flip cockpit switches and watch the flow change in real time.
-- **Audio walk-throughs** — narrated tour of every system, every flight phase, and every procedure. Uses your device's built-in text-to-speech.
-- **Procedure Trainer** — clickable schematic cockpit with 50+ switches and 18 procedures across Normal, Emergency (Memory), Abnormal, and Drill categories. Guided + free-form modes with scoring and progress tracking.
-- **Live Flight Phases** — 15-phase visualizer from Pre-Flight through Secured, with full Falcon 50 silhouette and 32 synoptic tiles showing every system at every phase.
-- **Quiz, Flashcards, Memory Items, Limitations** — 164 questions, bold-face items, searchable limitations.
+- **Vite 8 + React 19 + TypeScript** — fast, typed, maintainable.
+- **Tailwind v4** design system (`src/index.css` + `src/components/ui`).
+- **vite-plugin-pwa** (Workbox) — offline precache + auto-update.
+- **Supabase** (Auth + Postgres + RLS) — wired via env when provisioned; the
+  app runs in local guest mode until then.
+- **Zustand** — persisted study progress and trainer completion.
 
-## Install (PWA)
+## Study modes
 
-- **iPad / iPhone**: Open the link in Safari → Share → Add to Home Screen
-- **Mac**: Open in Safari → File → Add to Dock
-- **Windows**: Open in Chrome / Edge → click the install icon in the address bar
+Quiz · Study (flashcards) · Review Missed · Memory Items · Limitations
+(searchable) · Systems reference · Procedure Trainer (guided) · Live Flight
+Phases (synoptic systems display) · Procedures · Checkride Oral Prep
+(aircraft-aware) · Differences & Specs.
 
-Works fully offline after first launch.
+## Getting started
 
-## Sources
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # type-check + production build to dist/
+npm run preview    # serve the production build
+```
 
-Aircraft systems content is based on the manufacturer's published training material and the AFM. Always refer to the AFM and your operator's current company manuals for actual operations. This is a training aid only.
+Copy `.env.example` to `.env` to configure the backend / access code (all
+optional — the app runs without any of them).
+
+## Project layout
+
+```
+src/
+  components/   design-system UI + layout
+  data/         typed content modules (raw/ = extracted from legacy app)
+  features/     one folder per study mode
+  providers/    Auth, Aircraft, AccessGate context
+  state/        Zustand stores (progress, trainer)
+  types/        content + auth types
+  lib/          supabase client, helpers
+scripts/        extract-content.mjs (legacy → typed data)
+legacy/         original single-file app, preserved
+```
+
+## Deployment
+
+See **[DEPLOY.md](./DEPLOY.md)** for getting a private URL to pilots.
+
+## Disclaimer
+
+Training aid only. Always refer to the AFM and your operator's current company
+manuals for actual operations. Content is derived from publicly available
+training material; verify licensing before commercial resale (see `ROADMAP.md`).
 
 ---
 

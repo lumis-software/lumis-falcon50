@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { AccessGate } from "@/providers/AccessGate";
 import { AircraftProvider } from "@/providers/AircraftProvider";
 import { AuthProvider } from "@/providers/AuthProvider";
 import { HomeScreen } from "@/features/home/HomeScreen";
@@ -66,9 +67,10 @@ function RouteFallback() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <AircraftProvider>
-        <BrowserRouter>
+    <AccessGate>
+      <AuthProvider>
+        <AircraftProvider>
+          <BrowserRouter>
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<HomeScreen />} />
@@ -86,8 +88,9 @@ export default function App() {
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </Suspense>
-        </BrowserRouter>
-      </AircraftProvider>
-    </AuthProvider>
+          </BrowserRouter>
+        </AircraftProvider>
+      </AuthProvider>
+    </AccessGate>
   );
 }
