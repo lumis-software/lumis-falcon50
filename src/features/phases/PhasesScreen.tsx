@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { FLIGHT_PHASES } from "@/data/content";
 import type { PhaseState } from "@/types/content";
+import { FalconSideView, FalconTopView } from "./aircraftView";
 
 type TileColor = "go" | "warn" | "caution" | "info" | "slate";
 
@@ -104,6 +105,7 @@ function synoptic(s: PhaseState): { key: string; el: ReactNode }[] {
 export function PhasesScreen() {
   const [idx, setIdx] = useState(0);
   const [playing, setPlaying] = useState(false);
+  const [view, setView] = useState<"side" | "top">("side");
   const phase = FLIGHT_PHASES[idx];
 
   useEffect(() => {
@@ -182,6 +184,37 @@ export function PhasesScreen() {
           </div>
           <div className="mt-1 text-sm leading-relaxed text-ink-200">
             {phase.description}
+          </div>
+        </div>
+
+        <div className="mb-3 overflow-hidden rounded-xl border border-ink-800 bg-ink-950/60">
+          <div className="flex items-center justify-between border-b border-ink-800 px-3 py-1.5">
+            <span className="text-[11px] uppercase tracking-widest text-emerald-400">
+              Aircraft
+            </span>
+            <div className="flex gap-1">
+              {(["side", "top"] as const).map((v) => (
+                <button
+                  key={v}
+                  onClick={() => setView(v)}
+                  className={cn(
+                    "rounded-md px-2.5 py-1 text-[11px] font-medium capitalize transition-colors",
+                    view === v
+                      ? "bg-emerald-600 text-white"
+                      : "border border-ink-700 bg-ink-900 text-ink-300",
+                  )}
+                >
+                  {v} view
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="p-1">
+            {view === "side" ? (
+              <FalconSideView s={phase.state} />
+            ) : (
+              <FalconTopView s={phase.state} />
+            )}
           </div>
         </div>
 
