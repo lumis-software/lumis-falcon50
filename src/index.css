@@ -124,6 +124,35 @@ body {
   }
 }
 
+/* ============================================================
+   Interactive system schematics — animated flow + component glow.
+   Restored from the legacy app; the Pipe/Box/Valve components emit
+   these class names to convey live state.
+   ============================================================ */
+@keyframes flowdash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.flow-anim {
+  stroke-dasharray: 6 4;
+  animation: flowdash 0.9s linear infinite;
+}
+.flow-slow {
+  stroke-dasharray: 6 4;
+  animation: flowdash 2.2s linear infinite;
+}
+.flow-off {
+  stroke-dasharray: 4 4;
+  opacity: 0.35;
+}
+.comp-hot {
+  filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.7));
+}
+.comp-sel {
+  filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.85));
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

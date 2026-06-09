@@ -5,6 +5,7 @@ import {
   GraduationCap,
   Layers,
   ListChecks,
+  MonitorPlay,
   Plane,
   RotateCcw,
   ScrollText,
@@ -26,6 +27,16 @@ export interface StudyMode {
 }
 
 export const STUDY_MODES: StudyMode[] = [
+  {
+    id: "learn",
+    title: "Learn — Guided Lessons",
+    description:
+      "Read it, hear it, see it move — guided system courses with knowledge checks.",
+    icon: MonitorPlay,
+    accent: "emerald",
+    path: "/learn",
+    ready: true,
+  },
   {
     id: "quiz",
     title: "Quiz Mode",

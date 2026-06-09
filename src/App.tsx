@@ -5,6 +5,16 @@ import { AircraftProvider } from "@/providers/AircraftProvider";
 import { AuthProvider } from "@/providers/AuthProvider";
 import { HomeScreen } from "@/features/home/HomeScreen";
 
+const LearnScreen = lazy(() =>
+  import("@/features/learn/LearnScreen").then((m) => ({
+    default: m.LearnScreen,
+  })),
+);
+const LessonScreen = lazy(() =>
+  import("@/features/learn/LessonScreen").then((m) => ({
+    default: m.LessonScreen,
+  })),
+);
 const QuizScreen = lazy(() =>
   import("@/features/quiz/QuizScreen").then((m) => ({ default: m.QuizScreen })),
 );
@@ -76,6 +86,8 @@ export default function App() {
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<HomeScreen />} />
+              <Route path="/learn" element={<LearnScreen />} />
+              <Route path="/learn/:id" element={<LessonScreen />} />
               <Route path="/quiz" element={<QuizScreen />} />
               <Route path="/study" element={<StudyScreen />} />
               <Route path="/memory" element={<MemoryScreen />} />

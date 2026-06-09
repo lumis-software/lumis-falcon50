@@ -16,12 +16,18 @@ interface QuizScreenProps {
   fixedDeck?: Question[];
   title?: string;
   emptyMessage?: string;
+  /** Hide the page Header (for embedding inside another screen). */
+  embedded?: boolean;
+  /** Called once when the deck is finished, with the final score. */
+  onComplete?: (score: number, total: number) => void;
 }
 
 export function QuizScreen({
   fixedDeck,
   title = "Quiz Mode",
   emptyMessage,
+  embedded = false,
+  onComplete,
 }: QuizScreenProps = {}) {
   const isFixed = fixedDeck !== undefined;
   const [phase, setPhase] = useState<Phase>(isFixed ? "running" : "setup");
@@ -42,7 +48,7 @@ export function QuizScreen({
   if (isFixed && fixedDeck.length === 0) {
     return (
       <div>
-        <Header subtitle={title} showBack />
+        {!embedded && <Header subtitle={title} showBack />}
         <div className="mx-auto max-w-3xl px-5 py-16 text-center [animation:var(--animate-fade-in)]">
           <div className="mb-3 text-5xl">🎉</div>
           <p className="text-lg">
@@ -73,6 +79,7 @@ export function QuizScreen({
   function next() {
     if (idx >= deck.length - 1) {
       setPhase("done");
+      onComplete?.(score, deck.length);
     } else {
       setIdx((i) => i + 1);
       setSelected(null);
@@ -82,7 +89,7 @@ export function QuizScreen({
   if (phase === "setup") {
     return (
       <div>
-        <Header subtitle={title} showBack />
+        {!embedded && <Header subtitle={title} showBack />}
         <div className="mx-auto max-w-3xl px-5 py-6 [animation:var(--animate-fade-in)]">
           <h2 className="text-lg font-semibold">Choose a category</h2>
           <p className="mb-4 text-sm text-ink-400">
@@ -121,7 +128,7 @@ export function QuizScreen({
       pct >= 80 ? "#34d399" : pct >= 60 ? "#fbbf24" : "#f87171";
     return (
       <div>
-        <Header subtitle="Quiz Complete" showBack />
+        {!embedded && <Header subtitle="Quiz Complete" showBack />}
         <div className="mx-auto max-w-3xl px-5 py-10 text-center [animation:var(--animate-rise)]">
           <div className="mb-2 text-6xl">{emoji}</div>
           <h2 className="text-2xl font-bold">
@@ -146,7 +153,9 @@ export function QuizScreen({
   const q = deck[idx];
   return (
     <div>
-      <Header subtitle={`Quiz — Q${idx + 1}/${deck.length}`} showBack />
+      {!embedded && (
+        <Header subtitle={`Quiz — Q${idx + 1}/${deck.length}`} showBack />
+      )}
       <div className="mx-auto max-w-3xl px-5 py-6">
         <ProgressBar value={idx} max={deck.length} className="mb-5" />
         <div className="mb-2 text-xs uppercase tracking-widest text-brand-400">
