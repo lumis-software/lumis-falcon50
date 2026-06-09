@@ -47,6 +47,15 @@ function AcDefs() {
         <stop offset="50%" stopColor="#0d1526" />
         <stop offset="100%" stopColor="#05090f" />
       </linearGradient>
+      <filter id="acShadow" x="-20%" y="-20%" width="140%" height="160%">
+        <feDropShadow
+          dx="0"
+          dy="6"
+          stdDeviation="7"
+          floodColor="#000000"
+          floodOpacity="0.45"
+        />
+      </filter>
     </defs>
   );
 }
@@ -60,6 +69,7 @@ export function FalconTopView({ highlight }: { highlight?: string }) {
   return (
     <g>
       <AcDefs />
+      <g filter="url(#acShadow)">
       {/* Wings (low, swept) */}
       <g className={cls("wing", h)}>
         <polygon
@@ -174,6 +184,7 @@ export function FalconTopView({ highlight }: { highlight?: string }) {
       <g className={cls("apu", h)}>
         <circle cx="846" cy="240" r="9" fill={fill("apu", h, "#1a2740")} stroke="#7c8aa3" />
       </g>
+      </g>
     </g>
   );
 }
@@ -184,6 +195,7 @@ export function FalconSideView({ highlight }: { highlight?: string }) {
   return (
     <g>
       <AcDefs />
+      <g filter="url(#acShadow)">
       {/* Fuselage profile */}
       <path
         d="M40,196 C90,176 150,168 230,166 L760,170 C812,172 856,182 884,196 C860,206 812,214 760,216 L230,220 C150,220 90,214 40,196 Z"
@@ -252,6 +264,7 @@ export function FalconSideView({ highlight }: { highlight?: string }) {
       {/* Windshield anti-ice zone marker handled via hotspot */}
       <g className={cls("windshield", h)}>
         <path d="M120,184 C150,176 180,174 206,176" fill="none" stroke={highlight === "windshield" ? ACCENT : "transparent"} strokeWidth="4" />
+      </g>
       </g>
     </g>
   );
