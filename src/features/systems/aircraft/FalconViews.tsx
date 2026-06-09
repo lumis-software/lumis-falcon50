@@ -10,11 +10,12 @@
  * part (amber + glow) so a tapped hotspot lights up the real component.
  */
 
-const BODY = "#1b2740";
-const BODY_STROKE = "#5b6b86";
-const SURF = "#33455f";
-const SURF_STROKE = "#6b7d99";
-const ENGINE = "#0d1526";
+const BODY = "url(#acBody)";
+const WING = "url(#acWing)";
+const BODY_STROKE = "#6b7d99";
+const SURF = "url(#acSurf)";
+const SURF_STROKE = "#7d8fab";
+const ENGINE = "url(#acEng)";
 const ACCENT = "#f59e0b";
 
 function fill(id: string, highlight: string | undefined, base: string): string {
@@ -22,6 +23,32 @@ function fill(id: string, highlight: string | undefined, base: string): string {
 }
 function cls(id: string, highlight: string | undefined): string {
   return highlight === id ? "comp-sel" : "";
+}
+
+/** Shared gradient/shadow defs. Only one view is ever mounted per <svg>. */
+function AcDefs() {
+  return (
+    <defs>
+      <linearGradient id="acBody" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#3a4d6b" />
+        <stop offset="42%" stopColor="#223149" />
+        <stop offset="100%" stopColor="#0e1828" />
+      </linearGradient>
+      <linearGradient id="acWing" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#31435f" />
+        <stop offset="100%" stopColor="#15223a" />
+      </linearGradient>
+      <linearGradient id="acSurf" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#43577a" />
+        <stop offset="100%" stopColor="#293b57" />
+      </linearGradient>
+      <linearGradient id="acEng" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#243250" />
+        <stop offset="50%" stopColor="#0d1526" />
+        <stop offset="100%" stopColor="#05090f" />
+      </linearGradient>
+    </defs>
+  );
 }
 
 export const TOP_VIEW = { viewBox: "0 0 980 480" };
@@ -32,17 +59,18 @@ export function FalconTopView({ highlight }: { highlight?: string }) {
   const h = highlight;
   return (
     <g>
+      <AcDefs />
       {/* Wings (low, swept) */}
       <g className={cls("wing", h)}>
         <polygon
           points="430,228 520,72 566,72 545,228"
-          fill={fill("wing", h, "#22334d")}
+          fill={fill("wing", h, WING)}
           stroke={BODY_STROKE}
           strokeWidth="1.5"
         />
         <polygon
           points="430,252 545,252 566,408 520,408"
-          fill={fill("wing", h, "#22334d")}
+          fill={fill("wing", h, WING)}
           stroke={BODY_STROKE}
           strokeWidth="1.5"
         />
@@ -134,8 +162,8 @@ export function FalconTopView({ highlight }: { highlight?: string }) {
 
       {/* Horizontal stabilizer + elevators */}
       <g className={cls("hstab", h)}>
-        <polygon points="792,236 868,150 892,156 880,236" fill={fill("hstab", h, "#22334d")} stroke={BODY_STROKE} />
-        <polygon points="792,244 880,244 892,324 868,330" fill={fill("hstab", h, "#22334d")} stroke={BODY_STROKE} />
+        <polygon points="792,236 868,150 892,156 880,236" fill={fill("hstab", h, WING)} stroke={BODY_STROKE} />
+        <polygon points="792,244 880,244 892,324 868,330" fill={fill("hstab", h, WING)} stroke={BODY_STROKE} />
       </g>
       <g className={cls("elevator", h)}>
         <polygon points="880,176 892,156 888,210 878,210" fill={fill("elevator", h, SURF)} stroke={SURF_STROKE} />
@@ -155,6 +183,7 @@ export function FalconSideView({ highlight }: { highlight?: string }) {
   const h = highlight;
   return (
     <g>
+      <AcDefs />
       {/* Fuselage profile */}
       <path
         d="M40,196 C90,176 150,168 230,166 L760,170 C812,172 856,182 884,196 C860,206 812,214 760,216 L230,220 C150,220 90,214 40,196 Z"
@@ -171,7 +200,7 @@ export function FalconSideView({ highlight }: { highlight?: string }) {
 
       {/* Wing (side, low-mounted) */}
       <g className={cls("wing", h)}>
-        <polygon points="360,206 560,206 540,224 380,224" fill={fill("wing", h, "#22334d")} stroke={BODY_STROKE} />
+        <polygon points="360,206 560,206 540,224 380,224" fill={fill("wing", h, WING)} stroke={BODY_STROKE} />
       </g>
       {/* Flaps / slats hint on wing */}
       <g className={cls("slats", h)}>
@@ -180,7 +209,7 @@ export function FalconSideView({ highlight }: { highlight?: string }) {
 
       {/* Vertical fin + rudder */}
       <g className={cls("vfin", h)}>
-        <polygon points="690,170 770,70 806,72 800,170" fill={fill("vfin", h, "#22334d")} stroke={BODY_STROKE} />
+        <polygon points="690,170 770,70 806,72 800,170" fill={fill("vfin", h, WING)} stroke={BODY_STROKE} />
       </g>
       <g className={cls("rudder", h)}>
         <polygon points="800,80 818,74 824,168 800,168" fill={fill("rudder", h, SURF)} stroke={SURF_STROKE} />
@@ -192,7 +221,7 @@ export function FalconSideView({ highlight }: { highlight?: string }) {
 
       {/* Horizontal stabilizer + elevator */}
       <g className={cls("hstab", h)}>
-        <polygon points="800,150 884,140 892,150 800,160" fill={fill("hstab", h, "#22334d")} stroke={BODY_STROKE} />
+        <polygon points="800,150 884,140 892,150 800,160" fill={fill("hstab", h, WING)} stroke={BODY_STROKE} />
       </g>
       <g className={cls("elevator", h)}>
         <polygon points="868,142 892,150 868,158 864,150" fill={fill("elevator", h, SURF)} stroke={SURF_STROKE} />

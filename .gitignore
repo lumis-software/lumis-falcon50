@@ -11,3 +11,10 @@ dist-ssr/
 .vercel
 coverage/
 *.tsbuildinfo
+
+# dev render scratch
+scripts/_falcon.mjs
+scripts/_cn.js
+scripts/*.svg.png
+scripts/falcon-*.svg
+scripts/legacy-*.svg
