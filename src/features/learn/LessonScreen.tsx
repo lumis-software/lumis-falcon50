@@ -12,7 +12,7 @@ import { Header } from "@/components/layout/Header";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { QuizScreen } from "@/features/quiz/QuizScreen";
-import { InteractiveDiagram } from "@/features/systems/schematics/InteractiveDiagram";
+import { SystemVisual } from "@/features/systems/SystemVisual";
 import { getLesson, LESSONS } from "./lessonConfig";
 import { lessonComplete, useLearn } from "@/state/learnStore";
 
@@ -203,14 +203,13 @@ export function LessonScreen() {
         {step.kind === "diagram" && lesson.sysKey && (
           <div className="[animation:var(--animate-fade-in)]">
             <div className="mb-3 rounded-card border border-sky-800/50 bg-sky-950/30 p-3 text-sm text-sky-200">
-              Press <span className="font-semibold">play</span> on the audio
-              walk-through to hear the system explained while the matching
-              components light up. Then change the{" "}
-              <span className="font-semibold">scenario</span> to watch failures
-              ripple through the schematic, and tap any component for detail.
+              On the <span className="font-semibold">Aircraft</span> view, tap a
+              numbered marker to point at a part and learn what it is. Switch to
+              the <span className="font-semibold">Schematic</span> for the audio
+              walk-through and failure scenarios — tap any component for detail.
             </div>
-            <div className="rounded-card border border-ink-800 bg-ink-950/40">
-              <InteractiveDiagram sysKey={lesson.sysKey} />
+            <div className="rounded-card border border-ink-800 bg-ink-950/40 p-1">
+              <SystemVisual sysKey={lesson.sysKey} lessonId={lesson.id} />
             </div>
           </div>
         )}

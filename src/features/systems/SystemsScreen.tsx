@@ -2,11 +2,20 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { SYSTEMS } from "@/data/content";
-import { InteractiveDiagram } from "./schematics/InteractiveDiagram";
+import { SystemVisual } from "./SystemVisual";
+import { getAnnotatedView } from "./aircraft/pointLearn";
+
+function slugify(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
 
 export function SystemsScreen() {
   const [active, setActive] = useState<number | null>(null);
   const sys = active !== null ? SYSTEMS[active] : null;
+  const sysSlug = sys ? slugify(sys.name) : "";
 
   return (
     <div>
@@ -23,9 +32,11 @@ export function SystemsScreen() {
               <div className="text-xs font-semibold text-emerald-200">
                 {s.name}
               </div>
-              {s.sysKey && (
+              {(s.sysKey || getAnnotatedView(slugify(s.name))) && (
                 <div className="mt-1 text-[9px] text-emerald-500">
-                  🎛️ interactive
+                  {getAnnotatedView(slugify(s.name))
+                    ? "🛩️ point & learn"
+                    : "🎛️ interactive"}
                 </div>
               )}
             </button>
@@ -71,13 +82,13 @@ export function SystemsScreen() {
                 ))}
               </ul>
             </div>
-            {sys.sysKey && (
-              <>
-                <div className="px-5 pt-2 text-xs uppercase tracking-widest text-emerald-400">
-                  Interactive Schematic
+            {(sys.sysKey || getAnnotatedView(sysSlug)) && (
+              <div className="px-4 pb-5">
+                <div className="mb-2 px-1 text-xs uppercase tracking-widest text-emerald-400">
+                  Interactive Diagram
                 </div>
-                <InteractiveDiagram sysKey={sys.sysKey} />
-              </>
+                <SystemVisual sysKey={sys.sysKey} lessonId={sysSlug} />
+              </div>
             )}
           </div>
         </div>
