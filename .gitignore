@@ -18,3 +18,5 @@ scripts/_cn.js
 scripts/*.svg.png
 scripts/falcon-*.svg
 scripts/legacy-*.svg
+scripts/_pl.mjs
+scripts/pl-*.svg
