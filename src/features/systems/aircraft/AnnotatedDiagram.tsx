@@ -1,6 +1,13 @@
-import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Volume2, VolumeX, X } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Pause,
+  Play,
+  Volume2,
+  VolumeX,
+  X,
+} from "lucide-react";
 import { cn } from "@/lib/cn";
 import {
   FalconSideView,
@@ -26,21 +33,83 @@ export interface AnnotatedView {
   hotspots: Hotspot[];
 }
 
+const SPEECH =
+  typeof window !== "undefined" && "speechSynthesis" in window;
+
 export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
   const [sel, setSel] = useState<number | null>(null);
   const [speaking, setSpeaking] = useState(false);
+  const [touring, setTouring] = useState(false);
+  const timer = useRef<number | null>(null);
+
   const { viewBox } = data.view === "top" ? TOP_VIEW : SIDE_VIEW;
   const View = data.view === "top" ? FalconTopView : FalconSideView;
   const active = sel != null ? data.hotspots[sel] : null;
 
-  useEffect(() => () => window.speechSynthesis?.cancel(), []);
-  useEffect(() => {
+  const clearTimer = () => {
+    if (timer.current) {
+      window.clearTimeout(timer.current);
+      timer.current = null;
+    }
+  };
+
+  const stopSpeech = useCallback(() => {
     window.speechSynthesis?.cancel();
     setSpeaking(false);
-  }, [sel]);
+  }, []);
 
-  function speak() {
-    if (!active || !("speechSynthesis" in window)) return;
+  useEffect(
+    () => () => {
+      clearTimer();
+      window.speechSynthesis?.cancel();
+    },
+    [],
+  );
+
+  // Speak the active hotspot. If touring, advance when narration finishes.
+  useEffect(() => {
+    if (sel == null) return;
+    const hs = data.hotspots[sel];
+    const advance = () => {
+      if (sel >= data.hotspots.length - 1) {
+        setTouring(false);
+        setSpeaking(false);
+      } else {
+        setSel(sel + 1);
+      }
+    };
+
+    if (!touring) return;
+    if (SPEECH) {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(`${hs.label}. ${hs.body}`);
+      u.rate = 0.97;
+      setSpeaking(true);
+      u.onend = () => {
+        setSpeaking(false);
+        timer.current = window.setTimeout(advance, 500);
+      };
+      u.onerror = () => {
+        setSpeaking(false);
+        timer.current = window.setTimeout(advance, 2500);
+      };
+      window.speechSynthesis.speak(u);
+    } else {
+      timer.current = window.setTimeout(advance, 4200);
+    }
+    return clearTimer;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sel, touring]);
+
+  function selectManual(i: number | null) {
+    clearTimer();
+    setTouring(false);
+    stopSpeech();
+    setSel(i);
+  }
+
+  function speakOne() {
+    if (!active || !SPEECH) return;
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(`${active.label}. ${active.body}`);
     u.rate = 0.97;
@@ -50,7 +119,22 @@ export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
     window.speechSynthesis.speak(u);
   }
 
+  function toggleTour() {
+    if (touring) {
+      clearTimer();
+      stopSpeech();
+      setTouring(false);
+    } else {
+      stopSpeech();
+      setTouring(true);
+      setSel((s) => (s == null ? 0 : s));
+    }
+  }
+
   function step(dir: 1 | -1) {
+    clearTimer();
+    setTouring(false);
+    stopSpeech();
     setSel((s) => {
       const n = data.hotspots.length;
       if (s == null) return dir === 1 ? 0 : n - 1;
@@ -68,7 +152,7 @@ export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
             return (
               <g
                 key={hs.id}
-                onClick={() => setSel(on ? null : i)}
+                onClick={() => selectManual(on ? null : i)}
                 style={{ cursor: "pointer" }}
                 className={on ? "comp-sel" : ""}
               >
@@ -106,9 +190,22 @@ export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
         </svg>
       </div>
 
+      {/* Controls */}
       <div className="mt-2 flex items-center justify-between gap-2">
-        <div className="text-[11px] text-ink-500">{data.caption}</div>
-        <div className="flex gap-1">
+        <button
+          onClick={toggleTour}
+          className={cn(
+            "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors",
+            touring
+              ? "bg-amber-600 text-white"
+              : "bg-emerald-600 text-white hover:bg-emerald-500",
+          )}
+        >
+          {touring ? <Pause size={14} /> : <Play size={14} />}
+          {touring ? "Pause tour" : "▶ Guided tour"}
+        </button>
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] text-ink-500">{data.caption}</span>
           <button
             onClick={() => step(-1)}
             className="grid size-8 place-items-center rounded-lg border border-ink-700 bg-ink-900 text-ink-300 hover:border-ink-500"
@@ -137,20 +234,25 @@ export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
                 <span className="font-semibold text-amber-200">
                   {active.label}
                 </span>
-                <button
-                  onClick={() => (speaking ? window.speechSynthesis.cancel() : speak())}
-                  className="text-amber-300/80 hover:text-amber-200"
-                  aria-label="Read aloud"
-                >
-                  {speaking ? <VolumeX size={15} /> : <Volume2 size={15} />}
-                </button>
+                <span className="text-[10px] text-ink-500">
+                  {sel! + 1} / {data.hotspots.length}
+                </span>
+                {SPEECH && (
+                  <button
+                    onClick={() => (speaking ? stopSpeech() : speakOne())}
+                    className="text-amber-300/80 hover:text-amber-200"
+                    aria-label="Read aloud"
+                  >
+                    {speaking ? <VolumeX size={15} /> : <Volume2 size={15} />}
+                  </button>
+                )}
               </div>
               <p className="mt-1 text-xs leading-relaxed text-ink-200">
                 {active.body}
               </p>
             </div>
             <button
-              onClick={() => setSel(null)}
+              onClick={() => selectManual(null)}
               className="text-ink-400 hover:text-white"
               aria-label="Close"
             >
@@ -160,17 +262,18 @@ export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
         </div>
       ) : (
         <div className="mt-2 text-center text-[11px] text-ink-500">
-          Tap a numbered marker — or step through with the arrows — to point at a
-          part and learn it.
+          Press <span className="text-emerald-400">Guided tour</span> to have
+          each part pointed out and explained — or tap any numbered marker
+          yourself.
         </div>
       )}
 
-      {/* Quick legend */}
+      {/* Legend */}
       <div className="mt-2 flex flex-wrap gap-1.5">
         {data.hotspots.map((hs, i) => (
           <button
             key={hs.id}
-            onClick={() => setSel(i === sel ? null : i)}
+            onClick={() => selectManual(i === sel ? null : i)}
             className={cn(
               "rounded-md px-2 py-1 text-[11px] font-medium transition-colors",
               i === sel
@@ -182,20 +285,6 @@ export function AnnotatedDiagram({ data }: { data: AnnotatedView }) {
           </button>
         ))}
       </div>
-
-      {speaking && (
-        <Button
-          variant="ghost"
-          size="sm"
-          className="mt-2"
-          onClick={() => {
-            window.speechSynthesis.cancel();
-            setSpeaking(false);
-          }}
-        >
-          <VolumeX size={14} /> Stop narration
-        </Button>
-      )}
     </div>
   );
 }
